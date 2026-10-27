@@ -29,14 +29,13 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
 {
   "title": "Programmieren lernen mit Python – Schulversion",
   "context": "Selbstlernkurs für die Mittelstufe ab Klasse 7 · 5 Module, Basisweg 20–21 h, mit Erweiterungen 24–29 h in ca. 10 Wochen · Laptop, Tablet, Smartphone",
-  "subtitle": "Alle Module sind geprüft und freigegeben. Figuren, Sprecher und elf Geschichten sind neu gestaltet; die Crew funkt aus der Station, Schildi bleibt draußen. Die technische Seitenprüfung ist bestanden. Der Test auf einem echten Handy bleibt empfohlen.",
+  "subtitle": "Der Kurs ist veröffentlicht: als offenes Lernmaterial unter CC BY 4.0, mit Planung und Assistent zum Weiterarbeiten. Alle Module sind geprüft und freigegeben. Der Test auf einem echten Handy bleibt empfohlen – jetzt direkt über den Kurslink.",
   "next": {
-    "title": "Veröffentlichen",
-    "why": "Die Kursprüfung ist bestanden. Der Entwicklungsassistent legt das Projekt an und macht den Kurs als Link teilbar.",
-    "label": "Kurs veröffentlichen",
-    "href": "agent:development/create-project",
-    "command": ":agent development → :create-project",
-    "icon": "▶️"
+    "title": "Vorlagen auf einem Handy ausprobieren",
+    "why": "Der Kurslink ist öffentlich. Auf einem echten Smartphone zeigt sich, ob Touch-Bedienung, Vorlesen und Turtle-Grafik so laufen wie in der Seitenprüfung.",
+    "label": "Zum Kurslink",
+    "href": "#publishing-–-veröffentlichung",
+    "icon": "👁"
   },
   "unitLabel": {
     "one": "Modul",
@@ -253,8 +252,16 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
       "title": "Staubsturm",
       "state": "done",
       "statusLabel": "bestanden",
+      "usable": {
+        "state": "yes"
+      },
       "summary": "Staubsturm-Projekt · 5–6 h / 6–8 h · Wochen 8–10 – Eingaben, Zahlenraten, Endspiel mit den Glimmis, eigenes Wesen (Ziele 4, 5, 6).",
       "href": "#5.-staubsturm",
+      "view": {
+        "href": "agent:teaching/preview?file=5",
+        "command": ":preview 5",
+        "label": "So sehen es die Lernenden"
+      },
       "process": {
         "title": "Staubsturm",
         "steps": [
@@ -289,14 +296,6 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
             "result": "Freigegeben am 27.10.2026"
           }
         ]
-      },
-      "usable": {
-        "state": "yes"
-      },
-      "view": {
-        "href": "agent:teaching/preview?file=5",
-        "command": ":preview 5",
-        "label": "So sehen es die Lernenden"
       }
     }
   ],
@@ -310,9 +309,9 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
       "kind": "prepare",
       "title": "Vorlagen auf einem Handy ausprobieren",
       "why": "Die Seitenprüfung bei 390 × 844 ist bestanden. Bedienung per Touch, Vorlesen und Leistung sollen zusätzlich auf einem echten Smartphone ausprobiert werden.",
-      "how": "Alle 5 Module stehen: eine Turtle-Aufgabe auf dem Kraterboden (gern mit Felsen und Sensor oder den Glimmi-Simulator), eine Bildergeschichte und den sprechenden Avatar auf einem echten Handy öffnen. Das Spiel in Modul 5 ist für Geräte mit Tastatur gedacht. Was hakt, wird angepasst oder fliegt raus.",
-      "href": "#templates-–-vorlagen",
-      "label": "Zu den Vorlagen"
+      "how": "Den Kurslink unter „Veröffentlichung“ auf einem echten Handy öffnen: eine Turtle-Aufgabe auf dem Kraterboden (gern mit Felsen und Sensor oder den Glimmi-Simulator), eine Bildergeschichte und den sprechenden Avatar ausprobieren. Das Spiel in Modul 5 ist für Geräte mit Tastatur gedacht. Was hakt, wird angepasst und danach neu veröffentlicht.",
+      "href": "#publishing-–-veröffentlichung",
+      "label": "Zum Kurslink"
     }
   ],
   "process": {
@@ -363,16 +362,24 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
       },
       {
         "title": "Veröffentlichen",
-        "state": "planned",
+        "state": "done",
         "why": "Den geprüften Kurs als Link teilen.",
-        "next": "Der Entwicklungsassistent legt das Projekt an."
+        "result": "Öffentlich bei LiaPress seit 27.10.2026, Version 1.0.0, als offenes Lernmaterial unter CC BY 4.0 mit Planung und Assistent zum Weiterarbeiten"
       }
     ],
-    "note": "Du kannst jederzeit einen Schritt zurückgehen. Fertig ist ein Modul erst, wenn seine Prüfung bestanden ist und du es freigegeben hast."
+    "note": "Du kannst jederzeit einen Schritt zurückgehen. Fertig ist ein Modul erst, wenn seine Prüfung bestanden ist und du es freigegeben hast. Nach späteren Änderungen wird der Kurs neu veröffentlicht."
   },
   "explore": [
     {
-      "icon": "👁",
+      "icon": "🛠️",
+      "title": "Änderungen veröffentlichen",
+      "description": "Wenn du nach dem Handy-Test oder später etwas änderst, bringt der Entwicklungsassistent die neue Fassung online.",
+      "label": "Veröffentlichung aktualisieren",
+      "href": "agent:development/update-project",
+      "command": ":agent development → :update-project"
+    },
+    {
+      "icon": "➕",
       "title": "Neue Geschichten ansehen",
       "description": "Amara beginnt im Kontrollraum. Draußen begleiten gerahmte Funkbilder Schildi; sein Pixelgesicht reagiert beim Sprechen.",
       "label": "Funkkontakt ansehen",
@@ -416,9 +423,13 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
     {
       "label": "Kursprüfung",
       "href": "#validation-–-prüfung"
+    },
+    {
+      "label": "Veröffentlichung",
+      "href": "#publishing-–-veröffentlichung"
     }
   ],
-  "footer": "Modul 4 bestanden · 27.10.2026"
+  "footer": "Veröffentlicht · 27.10.2026"
 }
 ```
 
@@ -2359,14 +2370,14 @@ _Noch keine Lernendenprofile._
 ## Publishing – Veröffentlichung
 
 <!-- class="journal-actions" -->
-[▶️ Kurs veröffentlichen](agent:development/create-project) `:agent development` → `:create-project`
+[▶️ Veröffentlichung aktualisieren](agent:development/update-project) `:agent development` → `:update-project`
 
 <!--- Maintained by the Development-Agent (:create-project, :update-project): read from the repository before anything is published. The dashboard shows it. __State:__ stays an English key. --->
 
 * __Repository:__ https://github.com/LiaPress/python-marsmission-schule
 * __Branch:__ main
 * __Viewer URL:__ https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPress/python-marsmission-schule/main/README.md
-* __State:__ not published
+* __State:__ published on 2026-10-27 (commit 6451845)
 
 Veröffentlicht werden der Kurs (README.md, die benötigten Dateien unter assets/, die Python-Prüfvorlage unter lia-templates/python-pruefung/), diese Planung (journal.md) und der Teaching-Agent (specs/ mit den Startdateien für Coding-Agenten und dist/web-bundle.md), damit der Kurs weiterbearbeitet werden kann. Alle Imports bleiben an ihrem Platz. Kursinhalte und Planung stehen unter CC BY 4.0 (LICENSE), der Teaching-Agent unter der Boost Software License 1.0 (specs/LICENSE, assets/LICENSE-teaching-agent.txt). metadata.yml und das Topic open-educational-resources machen den Kurs in OERSI auffindbar. Nicht hochgeladen werden lokale Arbeitsdateien (Chats, Brainstorming, Zwischenstände), die CI des Teaching-Agents und PNG-Rohfassungen der Bilder.
 
