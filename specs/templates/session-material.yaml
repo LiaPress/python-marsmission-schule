@@ -1,0 +1,37 @@
+template:
+  id: session-material
+  name: 'Session Material'
+  version: 1.0
+  output:
+    format: markdown
+    filename: >
+      Resolved from `journal.md` → `## Course Context` → `__File Structure:__`
+      (see `data/file-structure-modes.md`): `materials/{{number}}-{{slug}}/README.md`
+      in multi-file mode, or the `##` chapter matching this session inside root
+      `README.md` in single-file mode.
+  title: 'Session {{number}} ({{type | title}})'
+  note: '{{type}} is a slug from `journal.md` → `## Didactics` → `__Session Types:__` (see `data/session-types.md`). Structure the outline below so it satisfies that type''s `Required` checklist.'
+  heading_levels: 'multi-file: as below — `#` is the title of the own material document, `##` its parts. single-file: every heading one level lower — the session is a `##` chapter of root `README.md` titled with the unit title — or its own title when that equals the course title (`data/file-structure-modes.md`) — never a `#`, the course title is the only `#` there; its parts are `###`.'
+  sections:
+    - id: outline
+      title: Planned Outline
+      template: |
+        # {{title}}
+
+        Summary
+
+        ## Introduction
+        Content
+        References
+
+        ## Main Part 1
+        Content
+        References
+
+        ## Main Part 2
+        Content
+        References
+
+        ## Summary / Wrap-up
+        Content
+        References

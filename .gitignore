@@ -1,0 +1,35 @@
+server/events.jsonl
+server/*.pid
+__pycache__/
+.mcp.json
+
+# Screenshots der Dashboard-Prüfung
+specs/dashboard/artifacts/
+test/dashboard/artifacts/
+.playwright-mcp/
+
+# Entwürfe für write-dashboard.mjs
+.cache/
+
+# Brainstorming-Entwürfe (Visual Companion)
+.superpowers/
+
+# Lokale Arbeitsdateien – nicht veröffentlichen
+.chats/
+.ecp/
+docs/superpowers/
+node_modules/
+.claude/skills/
+.agents/skills/
+
+# CI des Teaching-Agents selbst (prüft die Specs, nicht den Kurs)
+.github/workflows/
+
+# Bildentwürfe und Rohfassungen – im Kurs werden die WebP-Fassungen geladen
+assets/images/*.png
+!assets/images/kurslogo.png
+!assets/images/kurslogo-original.png
+!assets/images/kursicon.png
+assets/scenes/sprecher-vorschau.gif
+assets/theme/schildi-mars.json
+lia-templates/python-pruefung/assets/schildi-oben-original.png

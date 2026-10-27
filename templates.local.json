@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "mermaid",
+      "name": "Mermaid",
+      "icon": "📊",
+      "description": "Mermaid diagrams (flowchart, sequence diagram, journey) from text, optionally editable.",
+      "import": "https://raw.githubusercontent.com/LiaTemplates/mermaid_template/0.1.4/README.md",
+      "repo": "https://github.com/LiaTemplates/mermaid_template",
+      "subjects": ["diagrams", "programming"],
+      "audiences": ["secondary", "higher-education"],
+      "macros": ["@mermaid", "@mermaid_eval"],
+      "status": "found",
+      "note": "Online find of 27.10.2026, README read, not tried. Loads mermaid 10.5.0 from jsDelivr; diagrams missing offline."
+    },
+    {
+      "id": "wikimedia",
+      "name": "Wikimedia",
+      "icon": "🖼️",
+      "description": "Embed Wikimedia Commons media with title, licence and attribution.",
+      "import": "https://raw.githubusercontent.com/LiaTemplates/Wikimedia/0.0.2/README.md",
+      "repo": "https://github.com/LiaTemplates/Wikimedia",
+      "subjects": ["media", "images"],
+      "audiences": ["primary", "secondary", "higher-education"],
+      "macros": ["@Wikimedia.embed", "@Wikimedia.gallery", "@Wikimedia.credit", "@Wikimedia.license", "@Wikimedia.artist"],
+      "status": "found",
+      "note": "Online find of 27.10.2026, README read, not tried. Metadata fetched from the Commons API at runtime; errors only in the console."
+    },
+    {
+      "id": "virtual-speaker",
+      "name": "Virtual Speaker",
+      "icon": "🗣️",
+      "description": "Animated DiceBear avatar that moves its lips while a narrator comment is read aloud.",
+      "import": "https://raw.githubusercontent.com/LiaTemplates/virtual-speaker/0.1.1/README.md",
+      "repo": "https://github.com/LiaTemplates/virtual-speaker",
+      "subjects": ["narration", "media"],
+      "audiences": ["primary", "secondary", "higher-education"],
+      "macros": ["@VirtualSpeaker.speaker", "@VirtualSpeaker.dicebear"],
+      "status": "found",
+      "note": "Suggested by the instructor 27.10.2026, README read, not tried. Needs the narrator hook of the next LiaScript release; hidden in textbook mode."
+    },
+    {
+      "id": "pixijs",
+      "name": "PixiJS Stories",
+      "icon": "🎬",
+      "description": "Interactive picture stories with backgrounds, characters, dialog, choices and speech, rendered with PixiJS.",
+      "import": "https://raw.githubusercontent.com/LiaTemplates/pixijs/0.5.1/README.md",
+      "repo": "https://github.com/LiaTemplates/pixijs",
+      "subjects": ["storytelling", "media"],
+      "audiences": ["primary", "secondary", "higher-education"],
+      "macros": ["@Pixi.story", "@Pixi.run", "@Pixi.js", "@Pixi.scene", "@Pixi.autorun", "@Pixi.load", "@Pixi.check", "@Pixi.state", "@Pixi.plugin"],
+      "status": "found",
+      "note": "Suggested by the instructor 27.10.2026, README read, not tried. Mobile layout not described."
+    },
+    {
+      "id": "python-pruefung",
+      "name": "python-pruefung",
+      "icon": "🐢",
+      "description": "Python in the browser (Skulpt) with a hidden check block that runs after the learner's code and reports solved or a German hint.",
+      "import": "./lia-templates/python-pruefung/README.md",
+      "subjects": ["programming", "python", "turtle"],
+      "audiences": ["secondary"],
+      "macros": ["@PythonCheck.eval", "@PythonCheck.turtle"],
+      "status": "own"
+    }
+  ]
+}

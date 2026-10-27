@@ -1,0 +1,54 @@
+'@context': https://schema.org/
+creativeWorkStatus: Published
+type: LearningResource
+
+name: "Programmieren lernen mit Python – Schulversion"
+description: >-
+  Lerne Python mit Mars-Rover Schildi: ein interaktiver Selbstlernkurs ab
+  Klasse 7 ohne Vorkenntnisse. Fünf Module mit Turtle-Grafik, automatischen
+  Rückmeldungen, animierten Geschichten und eigenem Abschlussspiel – direkt
+  im Browser, ohne Installation.
+
+license: "https://creativecommons.org/licenses/by/4.0/deed.de"
+
+id: "https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPress/python-marsmission-schule/main/README.md"
+url: "https://github.com/LiaPress/python-marsmission-schule"
+
+creator:
+  - givenName: "André"
+    familyName: "Dietrich"
+    id: "https://orcid.org/0009-0009-9272-7154"
+    type: Person
+
+inLanguage:
+  - de
+
+about:
+  - "https://w3id.org/kim/hochschulfaechersystematik/n079"
+
+image: "https://raw.githubusercontent.com/LiaPress/python-marsmission-schule/main/assets/images/kurslogo.png"
+
+learningResourceType:
+  - "https://w3id.org/kim/hcrt/course"
+  - "https://w3id.org/kim/hcrt/web_page"
+
+educationalLevel:
+  - "https://w3id.org/kim/educationalLevel/level_2"
+
+interactivityType: active
+isAccessibleForFree: true
+timeRequired: "PT20H"
+
+keywords:
+  - Python
+  - Programmieren lernen
+  - Informatik
+  - Schule
+  - Sekundarstufe I
+  - Klasse 7
+  - Selbstlernkurs
+  - Turtle-Grafik
+  - LiaScript
+  - OER
+
+datePublished: "2026-10-27"

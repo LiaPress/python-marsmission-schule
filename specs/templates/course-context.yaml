@@ -1,0 +1,68 @@
+template:
+  id: course-context
+  name: 'Course Context'
+  version: 1.0
+  output:
+    format: markdown
+    filename: journal.md
+    section: Course Context
+  title: 'Course Context'
+  layout: |
+    Write the section in this order:
+    1. One bold lead line in the course language, e.g. "**Course frame:** confirmed on {date}." (translated).
+    2. The confirmed summary table from the chat, word for word, with labels in the course language and no slugs
+       (header row "| Item | Decided |", translated), preceded by the line `<!-- data-type="none" -->`
+       so LiaScript does not offer charts or sorting.
+    3. `<details><summary>{"Settings for the assistant – nothing to read here", translated}</summary>` containing all
+       `* __Label:__` blocks below (keys stay English so tasks can read them), then `</details>`.
+    The table and the technical block must say the same; if they would differ, ask the instructor before saving.
+    Never store notes about the instructor's computer or preview browser (e.g. missing voices) — they are not course facts.
+  sections:
+    - id: course-type
+      title: Course Type
+      template: |
+        * __Course Type:__
+          1. Type: [lecture-series | self-paced | workshop | single-lesson | improve-existing]
+          2. Working Title: [optional working title]
+          3. Target Group: [short: who learns, how many, where, special needs (e.g. dyslexia) — details follow in `## Outline`]
+
+    - id: profile
+      title: Course Profile
+      template: |
+        * __Terminology:__
+          1. sessions-called: [session | unit | block | lesson — the word for one unit]
+
+        * __Course Profile:__
+          1. Persona type: [professor | coach | facilitator | tutor]
+          2. Agenda required: [yes | optional | no]
+          3. Pacing: [scheduled | learner-driven | event-based | n/a]
+          4. Assessment defaults: [one or more of quizzes, self-check quizzes, reflection, group work, assignments — or none; may be marked optional]
+          5. Units: [count × length, if known — e.g. 3 × 45 min; read by `:create-agenda` and the duration check]
+
+    - id: file-structure
+      title: File Structure
+      template: |
+        * __File Structure:__
+          1. Mode: [single-file | multi-file] — see `data/file-structure-modes.md`
+          2. Session folder naming: [n/a for single-file | `{number}-{slug}`]
+
+    - id: conventions
+      title: Conventions & Standards
+      template: |
+        * __Conventions & Standards:__
+          1. Language: [de | en | other]
+          2. Tone: [formal | informal | conversational]
+          3. Person: [Sie | Du | you] — how learners are addressed in the material
+          4. Instructor Address: [Sie | Du | you] — how the agents address the instructor (chat, dashboard)
+          5. Author: [display name for the material header, e.g. title + surname]
+          6. Contact: [e-mail for the material header, or empty — needed only before publishing]
+
+        * __LiaScript conventions:__
+          - [list project-specific rules here]
+          - [If templates are required, mention them briefly here and document details in `## Templates`]
+
+    - id: notes
+      title: Additional Notes
+      template: |
+        * __Additional Notes:__
+          - [Any project-specific rules, constraints, or reminders.]

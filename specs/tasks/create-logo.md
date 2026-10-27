@@ -1,0 +1,68 @@
+# Task: create-logo
+
+## Purpose
+
+Generates a detailed logo prompt for the course based on the visual style guide, lecture outline, and didactic approach.
+Creates a professional, actionable prompt that can be used with AI image generators (DALL-E, Midjourney, Stable Diffusion, etc.).
+
+## Inputs
+
+- Title from `journal.md` → `## Outline` (`__Title:__` bullet)
+- Abstract from `journal.md` → `## Outline` (`__Abstract:__` bullet)
+- Logo style guidelines from `journal.md` → `## Visual Identity` (`__Logo Generation Guidelines:__` bullet)
+- Logo color palette from `journal.md` → `## Visual Identity` (`__Logo Color Palette:__` bullet)
+- Rule sheets, read completely with this task (`data/agent-links.md` → Chat Conduct → Rule sheets): `data/chat-dialog.md`, `data/journal-links.md`
+
+## Output
+
+- A detailed logo prompt (displayed as formatted text)
+- Saved to `journal.md` → `## Visual Identity` → `__Example Prompts:__` (the `Logo:` entry), since the logo is course-wide and not tied to a single session
+
+## Steps
+
+1. Read the course title and abstract from `journal.md` → `## Outline`.
+2. Read the logo style guidelines from `journal.md` → `## Visual Identity` (`__Logo Generation Guidelines:__` bullet).
+3. Read the logo color palette from `journal.md` → `## Visual Identity` (`__Logo Color Palette:__` bullet).
+4. Extract key themes, concepts, or symbols from the abstract.
+5. Combine style guidelines with course theme to create a detailed prompt.
+6. Include specific elements:
+   - Visual style (modern, minimalist, academic, etc.)
+   - Format (flat design, line art, geometric, etc.)
+   - Key symbols or metaphors from the course theme
+   - Color palette (with HEX codes)
+   - Mood and atmosphere
+   - Technical specifications (scalable, suitable for digital/print)
+7. Present the prompt in a clear, actionable format.
+8. Save the complete prompt into `journal.md` → `## Visual Identity` → `__Example Prompts:__` as the `1. Logo:` entry (replace the existing placeholder/prompt). Confirm: "Logo prompt saved: `journal.md` → `## Visual Identity` → `__Example Prompts:__`"
+9. Run `tasks/update-dashboard.md` with `templates/project-dashboard.yaml` to update `journal.md` → `## Dashboard` in place.
+
+## Output Format
+
+The logo prompt should follow this structure:
+
+```
+Logo Prompt for [Course Title]
+================================
+
+Style: [style from style guide]
+Format: [format from style guide]
+Theme: [extracted from abstract]
+Elements: [specific symbols, icons, or shapes]
+Colors: [HEX codes from style guide]
+Mood: [atmosphere from style guide]
+
+Complete Prompt:
+"[Full detailed prompt ready for image generator]"
+
+Technical Notes:
+- Resolution: Vector/high-res
+- Format: SVG/PNG with transparency
+- Usage: Course materials, website header, print materials
+```
+
+## Usage
+
+This task is invoked when:
+- A new course logo is needed
+- The style guide has been updated
+- Multiple logo variations are being explored

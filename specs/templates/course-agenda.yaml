@@ -1,0 +1,45 @@
+template:
+  id: course-agenda
+  name: 'Course Agenda'
+  version: 1.0
+  output:
+    format: markdown
+    filename: journal.md
+    section: Agenda
+  title: 'Course Agenda'
+  layout: |
+    Write the section for the instructor first, technical keys last:
+    1. One bold lead line in the course language ("Schedule confirmed on {date}", translated).
+    2. Visible, content in the course language without slugs, method names, file names or section keys.
+       Visible bold labels only in the course language; each carries its key invisibly in the attribute
+       comment directly above it (`<!-- data-key="overview" -->`, `"time-budget"`, `"modules"`):
+       * overview (`overview`): at most 3 sentences
+       * time budget (`time-budget`): the calculation per time slot (slot length − setup − wrap-up =
+         working time), sum of the mandatory units, buffer, phases outside the material (opening, closing);
+         for a single lesson also its phases with minutes as a short list (the units table has one row)
+       * the units table, preceded by `<!-- data-type="none" -->`, at most 5 columns in this order:
+         No. · Title (mandatory/optional) · Time · Kind (display name from Session Types) · Objectives;
+         No. as plain digits (`| 1 |`, never `1.` or `1\.`), the same in the technical table
+    3. `<details><summary>{"Settings for the assistant – nothing to read here", translated}</summary>` with a technical
+       table (No. · type slug · method slug · material path), then `</details>`. Omit the method column
+       when every unit uses the default method; say so in one sentence instead.
+    Use only keys defined below; do not invent new keys.
+  sections:
+    - id: overview
+      title: Overview
+      template: 'Short overview of the agenda, learning objectives, didactics & course type.'
+    - id: time-budget
+      title: Time Budget
+      template: 'Per time slot: slot length − setup − wrap-up = working time; sum of the mandatory units; buffer; phases outside the material.'
+    - id: modules
+      title: Modules / Sessions
+      template: >
+        Each session includes:
+
+        - Title, duration, type (slug from `journal.md` → `## Didactics` → `__Session Types:__`, see `data/session-types.md`)
+        - Method (slug from `data/didactic-methods.md` → "Session Methods"; defaults to `journal.md` → `## Didactics` → `__Default Session Method:__`, can be overridden per session — omitted entirely if the default is `none`)
+        - Learning objective(s) (a unit's summary belongs to its skeleton, not to the agenda)
+        - Automatic materials path, resolved from `journal.md` → `## Course Context` →
+          `__File Structure:__` (see `data/file-structure-modes.md`): a `##` chapter in
+          root `README.md` for single-file mode, or `materials/{n}-{slug}/README.md`
+          for multi-file mode

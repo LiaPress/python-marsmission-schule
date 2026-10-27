@@ -1,0 +1,99 @@
+template:
+  id: visuals
+  name: 'Style Guide'
+  version: 1.0
+  output:
+    format: markdown
+    filename: journal.md
+    section: Visual Identity
+  title: 'Visual Style Guide'
+
+  sections:
+    - id: logo-style
+      title: Logo Generation Guidelines
+      template: |
+        * __Logo Generation Guidelines:__
+          1. Style: [modern/minimalist/academic/playful/technical]
+          2. Format: [flat design/line art/geometric/illustrative]
+          3. Elements: [symbols, icons, or abstract shapes to include]
+          4. Mood: [professional/approachable/innovative/traditional]
+          5. Additional notes: [any specific requirements]
+
+        * __Default Logo Prompt Base:__
+          "A [style] logo for an educational course, [format] style, featuring [elements], conveying a [mood] atmosphere, clean and scalable design, suitable for digital and print use."
+
+    - id: logo-colors
+      title: Logo Color Palette
+      template: |
+        * __Logo Color Palette:__
+          1. Primary color: @color([HEX code]) - [color name/description]
+          2. Secondary color: @color([HEX code]) - [color name/description]
+          3. Accent color: @color([HEX code]) - [color name/description]
+          4. Background: @color([HEX code]) - [color name/description]
+
+        * __Color Usage:__
+          - Primary: Main logo elements, headings
+          - Secondary: Supporting elements, borders
+          - Accent: Highlights, call-to-action elements
+          - Background: Canvas, backgrounds
+
+    - id: image-prompt-style
+      title: Course Image Generation Guidelines
+      template: |
+        * __Course Image Generation Guidelines:__
+          1. Visual style: [photorealistic/illustrated/flat/isometric/hand-drawn]
+          2. Color scheme: [vibrant/muted/monochromatic/complementary]
+          3. Composition: [centered/rule-of-thirds/minimalist/detailed]
+          4. Lighting: [bright/soft/dramatic/natural]
+          5. Mood: [educational/professional/friendly/inspiring]
+          6. In-image text language: [course language]
+
+        * __Default Image Prompt Base:__
+          "A [visual style] image showing [subject], [composition] composition, [color scheme] colors, [lighting] lighting, [mood] atmosphere, suitable for educational materials, clean and professional."
+
+        * __Image Specifications:__
+          - Aspect ratio: [16:9/4:3/1:1/custom]
+          - Resolution: [recommended dimensions]
+          - Format: [PNG/JPG/SVG]
+          - Accessibility: Include meaningful alt text descriptions
+
+    - id: image-consistency
+      title: Image Consistency Rules
+      template: |
+        * __Image Consistency Rules:__
+          1. Color palette: Use the same color scheme as logo colors
+          2. Style: Keep the same visual style throughout
+          3. Characters: If using people/characters, maintain consistent style
+          4. Icons: Use consistent icon set (outline/filled/flat)
+          5. Typography in images: Use consistent fonts and sizes
+          6. Spacing: Maintain consistent padding and margins
+          7. Background: Use consistent background treatment
+
+    - id: website-colors
+      title: Website Color Palette
+      template: |
+        * __Website Color Palette:__
+          1. Primary: @color([HEX code]) - [usage: headings, section headers, primary UI elements]
+          2. Accent: @color([HEX code]) - [usage: highlights, call-to-action, important elements]
+          3. Text: @color([HEX code]) - [usage: main body text]
+          4. Background: @color([HEX code]) - [usage: page background]
+          5. Surface: @color([HEX code]) - [usage: content boxes, cards]
+
+    - id: liascript-theme
+      title: LiaScript Theme
+      optional: true
+      note: 'Only when the theme was generated with the skill `liascript-theming` (see `data/skills.md`) or written by hand. `promote-session` copies this block into every material header. Omit the bullet entirely otherwise.'
+      template: |
+        * __LiaScript Theme:__ {{source, e.g. "generated with liascript-theming from the website palette" or "bundled design: chalkboard"}}
+
+          ```text
+          {{the tested header lines: link: … / @style … @end / @custom … @end}}
+          ```
+
+    - id: example-prompts
+      title: Example Prompts
+      template: |
+        * __Example Prompts:__
+          1. Logo: "[Your complete logo prompt example]"
+          2. Course image: "[Your complete image prompt example]"
+          3. Diagram: "[Your complete diagram prompt example]"
