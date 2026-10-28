@@ -364,7 +364,7 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
         "title": "Veröffentlichen",
         "state": "done",
         "why": "Den geprüften Kurs als Link teilen.",
-        "result": "Öffentlich bei LiaPress seit 27.10.2026, Version 1.0.0, als offenes Lernmaterial unter CC BY 4.0 mit Planung und Assistent zum Weiterarbeiten"
+        "result": "Öffentlich bei LiaPress seit 27.10.2026, aktuell Version 1.0.1 vom 28.10.2026 (Sprecherbilder laden zuverlässiger), als offenes Lernmaterial unter CC BY 4.0 mit Planung und Assistent zum Weiterarbeiten"
       }
     ],
     "note": "Du kannst jederzeit einen Schritt zurückgehen. Fertig ist ein Modul erst, wenn seine Prüfung bestanden ist und du es freigegeben hast. Nach späteren Änderungen wird der Kurs neu veröffentlicht."
@@ -429,7 +429,7 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
       "href": "#publishing-–-veröffentlichung"
     }
   ],
-  "footer": "Veröffentlicht · 27.10.2026"
+  "footer": "Veröffentlicht · Version 1.0.1 · 28.10.2026"
 }
 ```
 
@@ -2377,7 +2377,7 @@ _Noch keine Lernendenprofile._
 * __Repository:__ https://github.com/LiaPress/python-marsmission-schule
 * __Branch:__ main
 * __Viewer URL:__ https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPress/python-marsmission-schule/main/README.md
-* __State:__ published on 2026-10-27 (commit 6451845)
+* __State:__ published on 2026-10-28 (version 1.0.1, commit 56d9cee; first release 1.0.0 on 2026-10-27, commit 6451845)
 
 Veröffentlicht werden der Kurs (README.md, die benötigten Dateien unter assets/, die Python-Prüfvorlage unter lia-templates/python-pruefung/), diese Planung (journal.md) und der Teaching-Agent (specs/ mit den Startdateien für Coding-Agenten und dist/web-bundle.md), damit der Kurs weiterbearbeitet werden kann. Alle Imports bleiben an ihrem Platz. Kursinhalte und Planung stehen unter CC BY 4.0 (LICENSE), der Teaching-Agent unter der Boost Software License 1.0 (specs/LICENSE, assets/LICENSE-teaching-agent.txt). metadata.yml und das Topic open-educational-resources machen den Kurs in OERSI auffindbar. Nicht hochgeladen werden lokale Arbeitsdateien (Chats, Brainstorming, Zwischenstände), die CI des Teaching-Agents und PNG-Rohfassungen der Bilder.
 
