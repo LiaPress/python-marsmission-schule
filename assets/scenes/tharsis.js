@@ -15,6 +15,26 @@
     berg: [480, 0, 400, 1024],
     schildi: [880, 320, 656, 680]
   };
+  // Three grey noise tiles, made once and shared by all speakers.
+  let tiles = null;
+  function noiseTiles() {
+    if (tiles) return tiles;
+    tiles = Array.from({ length: 3 }, () => {
+      const tile = document.createElement('canvas');
+      tile.width = tile.height = 128;
+      const g = tile.getContext('2d');
+      const image = g.createImageData(128, 128);
+      for (let i = 0; i < image.data.length; i += 4) {
+        const v = Math.random() * 255 | 0;
+        image.data[i] = image.data[i + 1] = image.data[i + 2] = v;
+        image.data[i + 3] = 255;
+      }
+      g.putImageData(image, 0, 0);
+      return tile;
+    });
+    return tiles;
+  }
+
   // Head and shoulders in the atlas: stand-in while a portrait is missing.
   const atlasHeads = { okoye: [150, 10, 240], berg: [575, 10, 240] };
 
@@ -61,9 +81,10 @@
   class TharsisSpeaker extends HTMLElement {
     static get observedAttributes() { return ['data-speaker']; }
     connectedCallback() {
-      this.innerHTML = '<div class="tharsis-radio"><span class="tharsis-channel">THARSIS / FUNKKANAL</span><canvas width="480" height="480" role="img"></canvas><span class="tharsis-name"></span><span class="tharsis-signal" aria-hidden="true">▂ ▄ ▆ ▄ ▂</span></div>';
+      this.innerHTML = '<div class="tharsis-radio"><canvas width="480" height="480" role="img"></canvas></div>';
       this.canvas = this.querySelector('canvas');
       this.context = this.canvas.getContext('2d');
+      this.patterns = null;
       this.speechStarted = performance.now();
       this.nextBlink = this.speechStarted + 3500 + Math.random() * 2500;
       this.blinkUntil = 0;
@@ -117,7 +138,6 @@
       this.blinkUntil = 0;
       this.winkUntil = 0;
       this.nextBlink = performance.now() + 3500 + Math.random() * 2500;
-      this.querySelector('.tharsis-name').textContent = names[this.speaker];
       this.canvas.setAttribute('aria-label', names[this.speaker]);
       this.draw(performance.now());
     }
@@ -138,6 +158,7 @@
       this.dataset.eyes = blink ? 'blink' : wink ? 'wink' : 'open';
       c.clearRect(0, 0, 480, 480);
       c.fillStyle = '#122438'; c.fillRect(0, 0, 480, 480);
+      let signal = true;
       if (this.speaker === 'schildi') {
         c.fillStyle = '#FBF7F2'; c.beginPath(); c.roundRect(35, 75, 410, 295, 40); c.fill();
         c.fillStyle = '#091321'; c.beginPath(); c.roundRect(55, 95, 370, 250, 25); c.fill();
@@ -159,8 +180,48 @@
         } else if (atlas.complete && atlas.naturalWidth) {
           const [x, y, size] = atlasHeads[this.speaker];
           c.drawImage(atlas, x, y, size, size, 0, 0, 480, 480);
+        } else {
+          signal = false;
         }
       }
+      this.interference(c, time, reduced, signal);
+    }
+    // Radio look: scanlines always; grain, a rolling bar and short glitches
+    // only with motion allowed. Without a picture the window shows snow.
+    interference(c, time, reduced, signal) {
+      if (!reduced) {
+        if (!this.nextGlitch) this.nextGlitch = time + 2000 + Math.random() * 4000;
+        if (time >= this.nextGlitch) {
+          this.glitchUntil = time + 120 + Math.random() * 280;
+          this.nextGlitch = time + 4000 + Math.random() * 6000;
+        }
+        const glitch = time < (this.glitchUntil || 0);
+        if (glitch) {
+          // Shift a few horizontal bands sideways.
+          for (let i = 0; i < 3; i++) {
+            const y = Math.random() * 460, h = 6 + Math.random() * 34;
+            const dx = (Math.random() < 0.5 ? -1 : 1) * (8 + Math.random() * 32);
+            c.drawImage(this.canvas, 0, y, 480, h, dx, y, 480, h);
+          }
+        }
+        const barY = (time / 9) % 600 - 60;
+        const bar = c.createLinearGradient(0, barY, 0, barY + 60);
+        bar.addColorStop(0, 'rgba(103,220,236,0)');
+        bar.addColorStop(0.5, 'rgba(103,220,236,0.07)');
+        bar.addColorStop(1, 'rgba(103,220,236,0)');
+        c.fillStyle = bar; c.fillRect(0, barY, 480, 60);
+        if (!this.patterns) this.patterns = noiseTiles().map(tile => c.createPattern(tile, 'repeat'));
+        const ox = Math.random() * 256, oy = Math.random() * 256;
+        c.save();
+        c.globalAlpha = !signal ? 0.5 : glitch ? 0.22 : 0.07;
+        c.globalCompositeOperation = signal && !glitch ? 'overlay' : 'source-over';
+        c.translate(-ox, -oy); c.scale(2, 2);
+        c.fillStyle = this.patterns[Math.floor(time / 80) % this.patterns.length];
+        c.fillRect(ox / 2, oy / 2, 240, 240);
+        c.restore();
+      }
+      c.fillStyle = 'rgba(9,19,33,0.2)';
+      for (let y = 0; y < 480; y += 4) c.fillRect(0, y, 480, 1);
     }
   }
   if (!customElements.get('tharsis-speaker')) customElements.define('tharsis-speaker', TharsisSpeaker);

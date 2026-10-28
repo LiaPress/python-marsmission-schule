@@ -1,7 +1,7 @@
 <!--
 author:   André Dietrich
 email:    LiaScript@web.de
-version:  1.0.1
+version:  1.0.2
 language: de
 narrator: Deutsch Female
 mode:     Presentation
@@ -16,7 +16,6 @@ attribute: Kursinhalte © André Dietrich, lizenziert unter [CC BY 4.0](https://
 
 import:   https://raw.githubusercontent.com/LiaTemplates/pixijs/0.5.1/README.md
           https://raw.githubusercontent.com/LiaTemplates/Skulpt/0.0.7/README.md
-          https://raw.githubusercontent.com/LiaTemplates/virtual-speaker/0.1.1/README.md
           https://raw.githubusercontent.com/LiaTemplates/mermaid_template/0.1.4/README.md
           ./lia-templates/python-pruefung/README.md
 
@@ -24,6 +23,8 @@ script:   ./assets/scenes/tharsis.js
 
 link:     https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap
           ./assets/scenes/tharsis.css
+
+@Tharsis.speaker: <!-- data-speaker="@0" -->
 
 @Tharsis.init
 <script>
@@ -189,7 +190,7 @@ details, .lia-quote, .lia-code__input, .lia-table-responsive, .lia-card {
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Hier spricht Kommandantin Amara Okoye von der Mars-Station Tharsis. Willkommen, Erde! Wir brauchen deine Hilfe: Unser Rover Schildi ist gerade gelandet, und nur du kannst ihm Programme schicken. In diesem Kurs lernst du dafür Python – direkt im Browser, ohne Installation. Am Ende baust du sogar dein eigenes kleines Spiel. Blättere weiter, sobald du bereit bist.
 
@@ -199,7 +200,7 @@ Willkommen auf der Mars-Station Tharsis! In diesem Kurs steuerst du den Rover Sc
 > [!TIP] Ton an!
 > Dieser Kurs erzählt dir viel zum Zuhören. Kein Ton? Kein Problem – alles Wichtige steht auch auf den Seiten.
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{1 Deutsch Female}}--
 Ein Tipp: Mach den Ton an. Dann erzählen wir – Schildi und ich – dir zu jedem Schritt, was gerade passiert. Wenn du keinen Ton hast, ist das auch in Ordnung: Alles Wichtige steht auch auf den Seiten.
 
@@ -207,7 +208,7 @@ Ein Tipp: Mach den Ton an. Dann erzählen wir – Schildi und ich – dir zu jed
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Heute ist ein besonderer Tag: Du nimmst zum ersten Mal Kontakt mit Schildi auf. Das passiert in drei Schritten.
 
@@ -216,21 +217,21 @@ Heute nimmst du zum ersten Mal Kontakt mit Schildi auf – in drei Schritten:
       {{1}}
 1. Du erfährst, was auf dem Mars gerade los ist.
 
-@VirtualSpeaker.speaker(okoye)
+@Tharsis.speaker(okoye)
 --{{1 Deutsch Female}}--
 Zuerst erzähle ich dir, was hier auf dem Mars gerade passiert ist. Es ist eine Menge.
 
       {{2}}
 2. Du lernst den Erd-Simulator kennen.
 
-@VirtualSpeaker.speaker(okoye)
+@Tharsis.speaker(okoye)
 --{{2 Deutsch Female}}--
 Dann zeige ich dir den Erd-Simulator. Dort testest du jedes Programm, bevor es auf die lange Reise zum Mars geht.
 
       {{3}}
 3. Du schickst deinen ersten Funkspruch.
 
-@VirtualSpeaker.speaker(okoye)
+@Tharsis.speaker(okoye)
 --{{3 Deutsch Female}}--
 Und zum Schluss schickst du Schildi deinen allerersten Funkspruch. Das dauert ungefähr eine Stunde. Du kannst jederzeit Pause machen und später genau hier weitermachen.
 
@@ -238,7 +239,7 @@ Und zum Schluss schickst du Schildi deinen allerersten Funkspruch. Das dauert un
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Hier siehst du, was auf dem Mars passiert ist. Tippe in die Szene, um weiterzulesen.
 
@@ -290,7 +291,7 @@ end start "Blättere weiter zu „Der Erd-Simulator“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Willkommen im Erd-Simulator! Bevor ein Programm die lange Reise zum Mars antritt, testen wir es hier auf der Erde. Ein Fehler hier kostet nichts – ein Fehler auf dem Mars kostet Zeit, Energie und manchmal einen ganzen Tag. Ich zeige dir jetzt, wie der Simulator funktioniert.
 
@@ -311,21 +312,21 @@ erwarte(ausgabe().strip() != "", "Es ist nichts angekommen – hast du den Text 
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{1 Deutsch Female}}--
 Das ist ein Code-Kasten. Darin steht ein Programm, also eine Liste von Befehlen für Schildi. Du darfst alles ändern, was du willst – kaputtmachen kannst du hier nichts. Probier es gleich aus: Drück auf den Knopf unter dem Kasten.
 
       {{2}}
 **Funkspruch:** Was dein Programm sendet, erscheint direkt unter dem Kasten.
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Alles, was du sendest, erscheint unter dem Kasten. So höre ich dich. Schau, unter dem Kasten steht jetzt dein Testfunkspruch. Bitte sprich immer deutlich. Ich nehme alles wörtlich.
 
       {{3}}
 **Prüfung:** **✅ Geschafft!** heißt: Schildi hat alles richtig empfangen. **💡** heißt: Da fehlt noch etwas – der Hinweis sagt dir, was.
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{3 Deutsch Female}}--
 Nach dem Ausführen prüft der Simulator dein Programm. Siehst du den grünen Haken mit „Geschafft“ unter dem Testfunkspruch? Er heißt: Schildi hat alles richtig empfangen. Eine Glühbirne heißt: Da fehlt noch etwas – lies dann den Hinweis daneben. Lösch einmal den ganzen Text im Kasten und führ es noch einmal aus. Dann siehst du, wie so ein Hinweis aussieht.
 
@@ -351,14 +352,14 @@ Der zweite verrät schon mehr. Auf den nächsten Seiten helfen sie dir bei den A
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{4 Deutsch Male}}--
 SCHILDI an ERDE: In meinem Speicher habe ich alte Notizen gefunden. Ich nenne sie Speicherfunde. Klapp einen auf, dann siehst du, wie das aussieht. Wenn du später festhängst, helfen sie dir. Aber probier es bitte zuerst selbst. Ich lerne auch lieber, wenn ich selbst darauf komme.
 
       {{5}}
 **Basis und Extra:** Jede Aufgabe hat einen **Basis**-Teil. Wer mehr will, macht danach das **Extra**.
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{5 Deutsch Female}}--
 Jede Aufgabe hat einen Basis-Teil – den schafft jeder. Wenn du danach noch Lust hast, gibt es ein Extra. Das ist freiwillig, aber Schildi freut sich über jede Herausforderung.
 
@@ -366,7 +367,7 @@ Jede Aufgabe hat einen Basis-Teil – den schafft jeder. Wenn du danach noch Lus
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Jetzt wird es ernst: Du schickst Schildi deinen ersten Funkspruch. Aber zuerst eine kleine Denkaufgabe. Ich habe Schildi vorhin schon ein Programm geschickt. Schau es dir an und überlege, was er wohl empfangen hat.
 
@@ -399,7 +400,7 @@ erwarte(ausgabe().strip() != "", "Schildi hat nichts empfangen – steht dein Te
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Das Wort print bedeutet: Gib das aus. Alles zwischen den Anführungszeichen schicke ich weiter. Probier es aus! Und dann ändere den Text – ich will hören, was du mir sagst.
 
@@ -434,7 +435,7 @@ So sieht es zum Beispiel aus: `print("Hallo Schildi, hier ist die Erde!")`
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 Jetzt bist du dran. Schreib deinen eigenen Funkspruch an Schildi. Ersetze die drei Striche durch deinen Text, aber lass die Anführungszeichen stehen. Was du schreibst, ist ganz dir überlassen.
 
@@ -455,7 +456,7 @@ erwarte("___" not in ausgabe(), "Ersetze die drei Striche ___ durch deinen Text.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Ich möchte wissen, wer du bist! Schick mir zwei Funksprüche: zuerst deinen Namen, dann einen Gruß. Dafür brauchst du zwei Zeilen – jede mit ihrem eigenen print.
 
@@ -463,7 +464,7 @@ SCHILDI an ERDE: Ich möchte wissen, wer du bist! Schick mir zwei Funksprüche: 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Oh nein – dieser Funkspruch ist verstümmelt angekommen. Führ ihn aus und schau, was passiert. Keine Sorge, du kannst nichts kaputtmachen.
 
@@ -488,7 +489,7 @@ Keine Angst vor Rot! Eine Fehlermeldung ist ein **abgefangener Funkspruch** von 
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Rot! Rot! Meine Statuslampe blinkt rot. Das ist eine Fehlermeldung. Für mich ist das wie ein abgefangener Brief von Python. Die Zeilennummer verrät den Absender, also wo das Problem sitzt. Die Fehlerart ist der Betreff. Und die letzte Zeile ist die eigentliche Nachricht.
 
@@ -521,7 +522,7 @@ Das zweite Anführungszeichen fehlt hinter dem Fragezeichen.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 Jetzt reparierst du das Programm. Schau genau hin: Python braucht bei einem Text immer zwei Anführungszeichen – eins am Anfang und eins am Ende. Wenn du nicht weiterkommst, helfen dir die Speicherfunde.
 
@@ -529,7 +530,7 @@ Jetzt reparierst du das Programm. Schau genau hin: Python braucht bei einem Text
 > [!NOTE] 🗄️ Fehlerkabinett – Nr. 1
 > **SyntaxError** – Python versteht die Schreibweise nicht. Oft fehlt ein Anführungszeichen oder eine Klammer.
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Diesen Fehler hebe ich auf! Ich sammle alle Fehlerarten in meinem Fehlerkabinett. Das hier ist Nummer eins: der SyntaxError. Er heißt: Die Schreibweise stimmt nicht.
 
@@ -537,7 +538,7 @@ SCHILDI an ERDE: Diesen Fehler hebe ich auf! Ich sammle alle Fehlerarten in mein
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Zum Schluss drei kurze Fragen. Sie zeigen dir, ob du das Wichtigste verstanden hast. Du kannst sie so oft wiederholen, wie du willst – hier gibt es keine Noten.
 
@@ -571,7 +572,7 @@ Welche Zeile einer Fehlermeldung ist die eigentliche Nachricht?
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Und jetzt: Schildis Antwort. Tippe in die Szene, um weiterzulesen.
 
@@ -605,7 +606,7 @@ end ende "Weiter geht es mit „Spuren im Staub“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Willkommen zurück, Erde! Schildi hat deinen ersten Funkspruch empfangen. Heute bekommt er eine richtige Aufgabe: Er soll eine Landemarkierung in den Staub zeichnen. Dafür muss er sich Zahlen merken, rechnen, Meldungen schicken und fahren. Das lernst du in diesem Modul.
 
@@ -620,7 +621,7 @@ Schildi bekommt eine Aufgabe: eine **Landemarkierung** im Staub. Dafür lernst d
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Auf der Station ist jemand Neues aufgewacht. Tippe in die Szene, um weiterzulesen.
 
@@ -658,7 +659,7 @@ end start "Blättere weiter zu „Schildis Notizbuch“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Hallo Erde, ich bin Jonas Berg, ich habe Schildi gebaut. Schildi braucht ein Notizbuch. In Python heißt so eine Notiz Variable. Links steht der Name, rechts der Wert. Und das Gleichheitszeichen heißt hier nicht „ist gleich“, sondern: Merk dir das!
 
@@ -722,7 +723,7 @@ Ersetze `___` durch die Zahl – ohne Anführungszeichen.
 
 ************************************************
 
-@VirtualSpeaker.speaker(berg)
+@Tharsis.speaker(berg)
 --{{1 Deutsch Male}}--
 Jetzt legst du Schildis erste Notizen an: den Akkustand und die gefahrene Strecke. Zahlen schreibst du ohne Anführungszeichen.
 
@@ -764,7 +765,7 @@ Du kannst eine Notiz überschreiben: Schreib einfach noch einmal `akku = …` mi
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Ich bin gefahren und mein Akku ist leerer geworden. Du kannst eine Notiz überschreiben. Dann vergesse ich den alten Wert und merke mir den neuen.
 
@@ -818,7 +819,7 @@ Ein Name ist Text – Text steht in Anführungszeichen.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{3 Deutsch Female}}--
 Kleine Denkaufgabe: Was steht am Ende im Notizbuch? Und im Extra bekommt Schildi seinen Namen – ein Name ist Text, also mit Anführungszeichen.
 
@@ -826,7 +827,7 @@ Kleine Denkaufgabe: Was steht am Ende im Notizbuch? Und im Extra bekommt Schildi
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Ich bin zwölf Meter gefahren, dann acht, dann fünfzehn. Wie weit war das insgesamt? Ich rechne nicht gern im Kopf. Kannst du mir das ausrechnen lassen?
 
@@ -888,7 +889,7 @@ Du kannst mehrere Zahlen mit `+` verbinden.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{1 Deutsch Female}}--
 Schreib die Rechnung rechts vom Gleichheitszeichen hin. Python rechnet sie aus und merkt sich das Ergebnis unter dem Namen gesamt.
 
@@ -931,7 +932,7 @@ Ersetze beide `___` durch `akku = akku - 10`.
 
 ************************************************
 
-@VirtualSpeaker.speaker(berg)
+@Tharsis.speaker(berg)
 --{{2 Deutsch Male}}--
 Die Zeile akku gleich akku minus zehn sieht in Mathe falsch aus. In Python ist sie richtig: Rechts wird zuerst gerechnet, mit dem alten Wert. Dann kommt das Ergebnis links ins Notizbuch.
 
@@ -1007,7 +1008,7 @@ Wie oft passt die 2 in die 50? Dafür gibt es eine Rechenart.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Elf Komma sechs sechs sechs? Ein Komma? Ach so, geteilt durch gibt immer eine Kommazahl. Und Python schreibt einen Punkt statt eines Kommas. Merke ich mir.
 
@@ -1015,7 +1016,7 @@ SCHILDI an ERDE: Elf Komma sechs sechs sechs? Ein Komma? Ach so, geteilt durch g
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Schildi soll uns Meldungen schicken, in denen Zahlen vorkommen. Dafür brauchen wir Text. Text heißt in Python String. Einen String erkennst du an den Anführungszeichen.
 
@@ -1056,7 +1057,7 @@ Der mittlere Baustein ist auch ein String – mit Leerzeichen vorn und hinten.
 
 ************************************************
 
-@VirtualSpeaker.speaker(okoye)
+@Tharsis.speaker(okoye)
 --{{1 Deutsch Female}}--
 Mit dem Pluszeichen hängst du Texte aneinander. Achte auf die Leerzeichen: Python klebt die Texte ganz genau so zusammen, wie sie dastehen.
 
@@ -1092,7 +1093,7 @@ Text und Zahl passen nicht direkt zusammen. Erst `str(akku)` macht aus der Zahl 
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 Text und Zahl passen nicht einfach zusammen. Str macht aus einer Zahl einen String. Erst dann kannst du beides mit Plus verbinden.
 
@@ -1154,7 +1155,7 @@ In die Klammer von `len()` gehört die Variable.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Piep, piep, piep! Mit dem Malzeichen wiederhole ich einen Text. Und im Extra zählst du, wie viele Zeichen mein Name hat.
 
@@ -1162,7 +1163,7 @@ SCHILDI an ERDE: Piep, piep, piep! Mit dem Malzeichen wiederhole ich einen Text.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Jetzt wird gefahren! Schildi kennt drei Befehle: forward heißt vorwärts, um so viele Schritte, wie in der Klammer steht. Left und right heißen links und rechts drehen, um so viele Grad. Und wo Schildi fährt, bleibt eine Spur im Staub.
 
@@ -1211,7 +1212,7 @@ Umdrehen heißt: einmal halb herum.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Erst einmal üben: hin und zurück. Um umzukehren, dreht sich Schildi um hundertachtzig Grad.
 
@@ -1259,7 +1260,7 @@ Bei einem Quadrat sind alle Seiten gleich lang und alle Ecken gleich.
 
 ************************************************
 
-@VirtualSpeaker.speaker(okoye)
+@Tharsis.speaker(okoye)
 --{{2 Deutsch Female}}--
 Jetzt die richtige Landemarkierung: ein Quadrat. Vier gleiche Seiten, vier gleiche Ecken. Du schreibst dafür ziemlich oft dasselbe. Im nächsten Modul lernst du, wie das kürzer geht.
 
@@ -1303,7 +1304,7 @@ Ein Quadrat hat 4 Seiten – es fehlen noch dreimal `forward(seite)` und `left(9
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Mit der Variablen seite muss ich die Zahl nur einmal ändern. Probier es aus: Schreib oben neunzig statt sechzig, dann wird die ganze Markierung größer.
 
@@ -1358,7 +1359,7 @@ erwarte(len(turtle_linien()) >= 5, "Deine Markierung braucht mindestens 5 Strich
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{4 Deutsch Male}}--
 Jetzt wird es kniffliger: ein Dreieck. Überleg genau, wie weit sich Schildi an jeder Ecke drehen muss. Ein Tipp: Auf dem ganzen Weg dreht er sich einmal ganz herum.
 
@@ -1366,7 +1367,7 @@ Jetzt wird es kniffliger: ein Dreieck. Überleg genau, wie weit sich Schildi an 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Drei Funksprüche sind kaputt angekommen. Meine Lampe blinkt rot. Hilfst du mir, sie zu reparieren?
 
@@ -1412,7 +1413,7 @@ Vergleiche den Namen in Zeile 1 und Zeile 2 Buchstabe für Buchstabe.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Name-Fehler! Python kannte den Namen nicht, nur weil ein Buchstabe fehlte. Das kommt in mein Fehlerkabinett, Nummer zwei.
 
@@ -1453,7 +1454,7 @@ Es geht auch mit Komma: `print("Akku:", akku)`. Dann setzt `print` selbst ein Le
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 Typ-Fehler: Text und Zahl passen nicht zusammen. Python weiß nicht, ob es rechnen oder Text verbinden soll. Mach die Zahl mit str zu Text, dann klappt es.
 
@@ -1491,7 +1492,7 @@ Zähl die Klammern in Zeile 1: Wie viele gehen auf, wie viele zu?
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{3 Deutsch Male}}--
 Vorsicht, Falle: Bei einer fehlenden Klammer nennt Python oft die Zeile danach. Wenn die genannte Zeile richtig aussieht, schau eine Zeile höher.
 
@@ -1499,7 +1500,7 @@ Vorsicht, Falle: Bei einer fehlenden Klammer nennt Python oft die Zeile danach. 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Bevor der Sturm kommt, prüfen wir, ob alles sitzt. Fünf Fragen und eine kleine Mission. Du kannst alles so oft wiederholen, wie du willst.
 
@@ -1582,7 +1583,7 @@ Wie beim Quadrat – aber abwechselnd `forward(breite)` und `forward(hoehe)`.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Geschafft. Schau, was auf dem Mars passiert. Tippe in die Szene.
 
@@ -1618,7 +1619,7 @@ end ende "Weiter geht es mit „Hindernisse und Gesteinsproben“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Gute Arbeit, Erde. Die Landemarkierung leuchtet, der Sturm ist vorbei. Jetzt soll Schildi zum Krater mit dem bläulichen Schimmer fahren. Auf dem Weg liegen Felsbrocken, und wir brauchen Gesteinsproben. Dafür muss Schildi selbst entscheiden und Dinge wiederholen können.
 
@@ -1634,7 +1635,7 @@ Schildi fährt zum Krater. Dafür lernst du heute:
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Die Sensoren melden etwas auf der Route. Tippe in die Szene, um weiterzulesen.
 
@@ -1671,7 +1672,7 @@ end start "Blättere weiter zu „Schildi entscheidet“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Wenn vor Schildi ein Felsen auftaucht, kann er nicht auf die Erde warten. Er vergleicht: Ist der Abstand kleiner als zehn Meter? Die Antwort auf so einen Vergleich ist immer wahr oder falsch. Auf Python heißt das True oder False.
 
@@ -1753,7 +1754,7 @@ Welches Zeichen aus der Tabelle heißt „kleiner als“? Und schau, was hinter 
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Mit if fragt Schildi: Stimmt das? Dann macht er die eingerückten Zeilen darunter. Wenn nicht, macht er, was unter else steht. Der Doppelpunkt sagt: Jetzt kommt, was dazugehört.
 
@@ -1799,7 +1800,7 @@ else:
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 Bei der Reihenfolge kommt es auf das Einrücken an. Wer mehr will, findet auf der nächsten Seite elif, das heißt: sonst, wenn. Und and, damit zwei Dinge gleichzeitig stimmen müssen.
 
@@ -1807,7 +1808,7 @@ Bei der Reihenfolge kommt es auf das Einrücken an. Wer mehr will, findet auf de
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Für alle, die noch Akku übrig haben. Hier entscheide ich zwischen drei Fällen, und einmal müssen zwei Dinge gleichzeitig stimmen. Alles freiwillig.
 
@@ -1877,7 +1878,7 @@ Gesucht ist das englische Wort für „und“.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Für das Quadrat hast du mir viermal dasselbe geschickt. Vier Funkpakete! Gibt es einen Befehl für: Mach das viermal?
 
@@ -1953,7 +1954,7 @@ Zähle die Seiten eines Quadrats.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Drei Zeilen statt acht. Die Zahl in range sagt, wie oft die eingerückten Zeilen laufen. Das spart Schildi viele Funkpakete.
 
@@ -1995,7 +1996,7 @@ Auf dem ganzen Weg dreht sich Schildi einmal ganz herum: 360 Grad, verteilt auf 
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Ein Paket für ein ganzes Sechseck! Akku: zufrieden. Auf der nächsten Seite warten ein Stern und eine Spirale, für alle, die mehr wollen.
 
@@ -2003,7 +2004,7 @@ SCHILDI an ERDE: Ein Paket für ein ganzes Sechseck! Akku: zufrieden. Auf der n�
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Zwei freiwillige Zeichnungen. Den Stern schreibst du ganz ohne Vorlage. In der Spirale benutzt du die Zahl i, die in der Schleife mitzählt.
 
@@ -2081,7 +2082,7 @@ erwarte(all(abs(laenge(linien[k]) - (10 + 10 * k)) < 2 for k in range(12)), "Die
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Manchmal weiß Schildi vorher nicht, wie oft er etwas tun muss. Er soll fahren, solange sein Akku reicht. Dafür gibt es while, das heißt: solange.
 
@@ -2146,7 +2147,7 @@ erwarte(a == 30 and f == 4, "Noch nicht: Schildi soll aufhören, sobald der Akku
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Die Zeile fahrten gleich fahrten plus eins ist ein Zähler. In jeder Runde kommt eins dazu. So weiß Schildi am Ende, wie oft er gefahren ist.
 
@@ -2154,7 +2155,7 @@ Die Zeile fahrten gleich fahrten plus eins ist ein Zähler. In jeder Runde kommt
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Zehn, neun, acht … Start! Wenn ich vergesse, die Zahl kleiner zu machen, zähle ich für immer. Dann stoppe ich nach fünf Sekunden und melde mich.
 
@@ -2227,7 +2228,7 @@ In jeder Runde soll die Zahl um 1 kleiner werden.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Die Station braucht Gesteinsproben. Schildi sammelt sie in einer Liste. Eine Liste ist wie eine Kiste mit nummerierten Fächern. Aber Achtung: Python fängt beim Zählen mit null an.
 
@@ -2314,7 +2315,7 @@ erwarte("4" in ausgabe(), "Gib mit len(proben) aus, wie viele Proben es sind.")
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Fach null: Basalt. Fach eins: Eis. Komisch, bei euch auf der Erde fängt man bei eins an. Ich merke es mir.
 
@@ -2353,7 +2354,7 @@ erwarte(zeilen == ["Probe: Basalt", "Probe: Eis", "Probe: Sand"], "Jede Zeile so
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 For probe in proben heißt: Nimm nacheinander jede Probe aus der Liste. In jeder Runde steht in probe eine andere. So muss Schildi nicht wissen, wie lang die Liste ist.
 
@@ -2361,7 +2362,7 @@ For probe in proben heißt: Nimm nacheinander jede Probe aus der Liste. In jeder
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 In diesen Extras verbindest du Schleife und Entscheidung. Schildi geht jede Probe durch und entscheidet bei jeder neu. Alles freiwillig.
 
@@ -2438,7 +2439,7 @@ Schildi merkt sich die neue schwerste Probe in der Variablen `schwerste`.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Jetzt kommt alles zusammen. Schildis Sensor misst vor jedem Abschnitt, wie weit der nächste Felsen weg ist. Die Messwerte kommen als Liste. Für jeden Wert entscheidet Schildi: fahren oder ausweichen.
 
@@ -2489,7 +2490,7 @@ Ausweichen, wenn der Abstand kleiner als 10 ist – wie auf „Schildi entscheid
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Fahren, ausweichen, fahren, ausweichen, fahren. Ich habe fünfmal selbst entschieden, ohne einen einzigen Funkspruch zur Erde.
 
@@ -2497,7 +2498,7 @@ SCHILDI an ERDE: Fahren, ausweichen, fahren, ausweichen, fahren. Ich habe fünfm
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Zwei freiwillige Extras: Schildi zählt mit, wie oft er ausweichen musste, und er zeichnet seine Route in den Staub. Auf der Zeichnung siehst du jeden Felsen als kleinen Haken.
 
@@ -2576,7 +2577,7 @@ Unter `else:` gehört der Befehl fürs Geradeausfahren – eingerückt.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Berg hat mir einen neuen Sensor eingebaut! Er schaut in einem Viertelkreis nach vorn. Liegt dort ein Felsen, leuchtet er rot. Ich frage ihn mit schildi punkt hindernis.
 
@@ -2623,7 +2624,7 @@ Gesucht ist das Wort, das `True` und `False` umdreht.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Im Prüflauf liegt der Felsen an einer anderen Stelle. Darum klappt es nur, wenn Schildi wirklich mit dem Sensor entscheidet. Eine feste Zahl bei forward reicht nicht.
 
@@ -2670,7 +2671,7 @@ Frag den Sensor: Liegt ein Felsen vor dir?
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 Jetzt fährt Schildi ganz allein durchs Kraterfeld. Bei jedem Schritt fragt er seinen Sensor und entscheidet selbst, ohne einen Funkspruch zur Erde. Und im Prüflauf liegen die Felsen sogar woanders.
 
@@ -2678,7 +2679,7 @@ Jetzt fährt Schildi ganz allein durchs Kraterfeld. Bei jedem Schritt fragt er s
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Zwei freiwillige Aufträge. Zuerst zählst du, wie oft ich ausweichen musste. Dann fahre ich bis vor einen Felsen und genauso weit wieder zurück.
 
@@ -2765,7 +2766,7 @@ Die Zahl der Schritte hat Schildi sich in einer Variablen gemerkt. Im Prüflauf 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Meine Lampe blinkt rot. Ein paar Funksprüche sind kaputt angekommen. Diesmal geht es um Doppelpunkte, Einrücken und Schleifen.
 
@@ -2834,7 +2835,7 @@ Was zu `if` gehört, muss eingerückt sein.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Zweimal dieselbe Meldung, zwei verschiedene Ursachen. Darum lohnt es sich, die genannte Zeile genau anzuschauen: Fehlt ein Zeichen, oder steht etwas an der falschen Stelle?
 
@@ -2853,7 +2854,7 @@ Zwei neue Fehlerarten für Schildis Kabinett – du triffst sie bei Schleifen un
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Zwei neue Fehler für mein Kabinett: Nummer vier, die Schleife ohne Ende, und Nummer fünf, die Probe, die es nicht gibt. Auf der nächsten Seite kannst du beide reparieren.
 
@@ -2861,7 +2862,7 @@ SCHILDI an ERDE: Zwei neue Fehler für mein Kabinett: Nummer vier, die Schleife 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Drei kaputte Funksprüche für alle, die mehr wollen: eine Schleife ohne Ende, eine Probe, die es nicht gibt, und ein Gleichheitszeichen zu wenig. Vorsicht: Eins heißt merken, zwei heißt vergleichen.
 
@@ -2956,7 +2957,7 @@ Ein `=` heißt „merk dir das“. Zum Vergleichen braucht Python etwas anderes.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Bevor Schildi zum Krater fährt, prüfen wir, ob alles sitzt. Fünf Fragen und eine Mission. Du kannst alles so oft wiederholen, wie du willst. Wer danach noch mehr will, findet auf der nächsten Seite ein Meisterstück.
 
@@ -3038,7 +3039,7 @@ for t in temperaturen:
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Das Meisterstück! Eine Schleife in einer Schleife. Ich zeichne sechs Sechsecke wie eine Blume in den Staub. Das ist freiwillig, aber es sieht großartig aus.
 
@@ -3084,7 +3085,7 @@ for runde in range(6):
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Geschafft. Schau, wie weit Schildi gekommen ist. Tippe in die Szene.
 
@@ -3119,7 +3120,7 @@ end ende "Weiter geht es mit „Manöver und Probenkatalog“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Schildi hat den Kraterrand erreicht, Erde. Unten im Krater leuchtet es, mal hier, mal dort. Für die steile Fahrt nach unten und für die vielen Funde braucht Schildi jetzt eigene Befehle, einen Katalog und ein bisschen Glück.
 
@@ -3134,7 +3135,7 @@ Schildi fährt in den Krater. Dafür lernst du heute:
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Schildi blickt in den Krater. Tippe in die Szene, um weiterzulesen.
 
@@ -3169,7 +3170,7 @@ end start "Blättere weiter zu „Eigene Befehle“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Für die Fahrt in den Krater braucht Schildi feste Manöver. Statt jedes Mal alle Befehle zu schicken, bringen wir ihm eigene Befehle bei. In Python heißt so ein eigener Befehl Funktion. Man legt ihn einmal an und kann ihn dann so oft benutzen, wie man will.
 
@@ -3246,7 +3247,7 @@ Ein Befehl läuft erst, wenn man ihn aufruft – mit Namen und Klammern, nicht e
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Erst wenn du melden mit Klammern schreibst, melde ich mich. Ein angelegter Befehl allein tut gar nichts.
 
@@ -3294,7 +3295,7 @@ Ein Quadrat hat an jeder Ecke denselben Winkel – wie in Modul 2.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 Der Befehl ecke kennt eine Seite und eine Ecke. Die Schleife ruft ihn viermal auf, und fertig ist das Quadrat. So baut man aus kleinen Befehlen große.
 
@@ -3302,7 +3303,7 @@ Der Befehl ecke kennt eine Seite und eine Ecke. Die Schleife ruft ihn viermal au
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Für den Hang brauche ich ein Zickzack-Manöver. Baust du es mir? Freiwillig.
 
@@ -3352,7 +3353,7 @@ def zickzack():
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Nicht jedes Quadrat soll gleich groß sein. Darum bekommt ein Befehl Zutaten. In der Klammer steht ein Name, zum Beispiel seite. Beim Aufruf schreibst du die Zahl hinein, und der Befehl rechnet damit.
 
@@ -3413,7 +3414,7 @@ Die Zahl in der Klammer des Aufrufs landet in `seite`.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Ein Befehl, zwei Größen. Beim ersten Aufruf ist seite vierzig, beim zweiten achtzig.
 
@@ -3482,7 +3483,7 @@ Teile den Akku durch 2 und gib das Ergebnis mit `return` zurück – eingerückt
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Die Prüfung hat mich gerade dreimal gefragt, mit fünfzig, achtzig und null. Mit return bekommt sie jedes Mal eine Antwort. Mit print hätte ich nur laut gedacht.
 
@@ -3490,7 +3491,7 @@ SCHILDI an ERDE: Die Prüfung hat mich gerade dreimal gefragt, mit fünfzig, ach
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Zwei freiwillige Aufgaben. Ein Befehl mit zwei Zutaten zeichnet jedes Vieleck. Und ein Befehl, der nur mit True oder False antwortet.
 
@@ -3565,7 +3566,7 @@ Ein Vergleich ergibt schon `True` oder `False` – den kannst du direkt zurückg
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Jede Probe kommt in einen Katalog. Zu jedem Namen notiert Schildi das Gewicht. In Python heißt so ein Katalog Dictionary, auf Deutsch Wörterbuch. Man schlägt ein Wort nach und findet, was dazu gehört.
 
@@ -3654,7 +3655,7 @@ Neu eintragen wie eine Variable: links der Katalog mit dem neuen Schlüssel in e
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Mein Katalog wächst! Ich schlage den Namen nach und finde sofort das Gewicht. Bei einer Liste müsste ich Fach für Fach suchen.
 
@@ -3696,7 +3697,7 @@ Schlag im Katalog unter dem Namen nach – der Name ist die Zutat `name`, ohne A
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 Befehl und Katalog arbeiten jetzt zusammen. Die Prüfung ruft gewicht mit verschiedenen Namen auf und prüft jedes Mal die Antwort.
 
@@ -3704,7 +3705,7 @@ Befehl und Katalog arbeiten jetzt zusammen. Die Prüfung ruft gewicht mit versch
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Zwei freiwillige Aufgaben für den Katalog: Wie schwer ist alles zusammen? Und was antwortet Schildi, wenn eine Probe gar nicht im Katalog steht?
 
@@ -3780,7 +3781,7 @@ erwarte(gewicht("Eis") == 1, "Bekannte Proben sollen weiter ihr Gewicht liefern.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Die Eiskristalle leuchten mal hier, mal dort. Ich kann nicht vorhersagen, welcher als Nächstes aufleuchtet. Das ist Zufall. Und Python kann auch würfeln.
 
@@ -3845,7 +3846,7 @@ Ein Würfel hat die Zahlen 1 bis 6 – die kleinste und die größte gehören in
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Die Prüfung hat zweihundertmal gewürfelt. Sie prüft nicht eine bestimmte Zahl, sondern ob alle Würfe zwischen eins und sechs liegen und ob jede Zahl vorkommt.
 
@@ -3890,7 +3891,7 @@ erwarte(len(set(werte)) >= 3, "Es soll zufällig mal die eine, mal die andere Ri
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 Nord, Ost, Süd oder West: Welcher Kristall leuchtet, entscheidet der Zufall. Führ das Programm ein paar Mal aus und schau, was Schildi meldet.
 
@@ -3898,7 +3899,7 @@ Nord, Ost, Süd oder West: Welcher Kristall leuchtet, entscheidet der Zufall. F�
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Zwei freiwillige Zufallsaufträge. Ich mache einen Spaziergang, bei dem eine Münze entscheidet, wohin ich abbiege. Und ich zähle, wie oft eine Sechs fällt.
 
@@ -3978,7 +3979,7 @@ Wie beim Zählen der Eis-Proben in Modul 3: Der Zähler bekommt eins dazu.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Weißt du noch, das Kraterfeld aus dem letzten Modul? Jetzt bauen wir daraus richtige Manöver. Jedes Manöver ist ein eigener Befehl. Dann liest sich das Programm fast wie ein Funkspruch: fahre bis zum Felsen, weiche aus.
 
@@ -4038,7 +4039,7 @@ Wie auf „Schildis Sensor“ in Modul 3: fahren, solange **kein** Felsen da ist
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Fahre bis zum Felsen. Weiche aus. Fahre bis zum Felsen. Weiche aus. So liest sich mein Programm jetzt, und im anderen Feld klappt es genauso.
 
@@ -4046,7 +4047,7 @@ SCHILDI an ERDE: Fahre bis zum Felsen. Weiche aus. Fahre bis zum Felsen. Weiche 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Ein freiwilliges Extra: ein dritter Befehl, der die anderen beiden benutzt. Wie viele Felsen es sind, bekommt er als Zutat.
 
@@ -4099,7 +4100,7 @@ Die Schleife soll so oft laufen, wie die Zutat sagt – schreib ihren Namen in d
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Meine Lampe blinkt rot. Diesmal stecken die Fehler in meinen eigenen Befehlen und im Katalog. Einer davon meldet sich nicht einmal mit einer roten Meldung.
 
@@ -4169,7 +4170,7 @@ Im Befehl `return akku / 2` statt `print(akku / 2)`.
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Der TypeError ist ein alter Bekannter aus dem Fehlerkabinett, Nummer drei. Diesmal steckt None dahinter. Die markierte Zeile zeigt, wo es knallt. Die Ursache steht aber weiter oben, im Befehl.
 
@@ -4210,7 +4211,7 @@ Groß- und Kleinschreibung zählt. Vergleiche den Schlüssel Buchstabe für Buch
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Eis mit kleinem e steht nicht in meinem Katalog. Für mich sind das zwei verschiedene Wörter. Das kommt ins Fehlerkabinett, Nummer sechs.
 
@@ -4218,7 +4219,7 @@ SCHILDI an ERDE: Eis mit kleinem e steht nicht in meinem Katalog. Für mich sind
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Zwei freiwillige Fehler für Profis. Einmal fehlt beim Aufruf eine Zutat. Und einmal kommt der Aufruf zu früh.
 
@@ -4283,7 +4284,7 @@ Schreib `melden()` unter den Befehl – nicht eingerückt.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Bevor der Sturm kommt, prüfen wir, ob alles sitzt. Fünf Fragen und eine Mission. Du kannst alles so oft wiederholen, wie du willst. Wer danach noch mehr will, findet auf der nächsten Seite ein Meisterstück.
 
@@ -4371,7 +4372,7 @@ def bewerte(probe):
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Das Meisterstück! Ich zeichne ein Kristallfeld: fünf Sterne an zufälligen Stellen. Dafür hebe ich meinen Stift, fahre an eine Stelle und setze ihn wieder ab.
 
@@ -4427,7 +4428,7 @@ for i in range(5):
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Geschafft. Aber auf dem Mars bleibt es nicht lange ruhig. Tippe in die Szene.
 
@@ -4463,7 +4464,7 @@ end ende "Weiter geht es mit „Staubsturm“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Der Sturm ist da, Erde. Schildi sieht nichts mehr und braucht uns jetzt Schritt für Schritt. Und irgendwo im Staub leuchtet etwas, das wir noch nicht kennen.
 
@@ -4478,7 +4479,7 @@ Schildi steckt im Staubsturm. Dafür lernst du heute:
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Der Sturm hat Schildi erreicht. Tippe in die Szene, um weiterzulesen.
 
@@ -4515,7 +4516,7 @@ end start "Blättere weiter zu „Funk-Runden“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Bis jetzt hat Schildi fertige Programme bekommen. Im Sturm fragt er nach jedem Schritt. Dafür gibt es input. Das Programm hält an und wartet, bis jemand etwas eintippt. Genau wie Schildi auf unseren Funk wartet.
 
@@ -4593,7 +4594,7 @@ Text steht in Anführungszeichen, und `==` vergleicht ihn Buchstabe für Buchsta
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Ich vergleiche Buchstabe für Buchstabe. Vor mit großem V wäre für mich ein anderer Befehl. Dann warte ich lieber.
 
@@ -4632,7 +4633,7 @@ erwarte("int(" in code(), "Mach aus dem Text der Eingabe eine Zahl.")
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 Ohne int ist meter der Text drei, und Text mal zehn ist zehnmal die Drei hintereinander. Mit int wird daraus die Zahl drei, und Schildi rechnet richtig: dreißig Akku.
 
@@ -4640,7 +4641,7 @@ Ohne int ist meter der Text drei, und Text mal zehn ist zehnmal die Drei hintere
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Zwei freiwillige Aufträge. Erst nimmt Schildi Befehle an, bis wir stopp funken. Dann lotsen wir ihn damit wirklich über den Kraterboden.
 
@@ -4722,7 +4723,7 @@ Noch ein `elif` mit demselben Aufbau wie bei `links` – eingerückt wie die and
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Das blaue Licht blinkt. Wenn ich mit meiner Lampe blinke, antwortet es. Blinke ich zu wenig, wird es heller. Blinke ich zu viel, wird es dunkler. Ich glaube, es denkt sich eine Zahl.
 
@@ -4825,7 +4826,7 @@ Es sind dieselben Vergleiche wie im Beispiel oben: zu klein ist `<`, zu groß is
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{1 Deutsch Female}}--
 Die Schleife fragt, bis der Tipp stimmt. Die geheime Zahl bleibt dabei dieselbe, sie wird nur einmal gewürfelt, vor der Schleife. Spiel ruhig ein paar Runden.
 
@@ -4878,7 +4879,7 @@ Zählen kennst du aus Modul 3: Eine Variable wächst in der Schleife bei jeder R
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 Wer wild rät, braucht bis zu zwanzig Funk-Runden. Das sind fast sieben Stunden. Da muss es einen schnelleren Weg geben.
 
@@ -4886,7 +4887,7 @@ Wer wild rät, braucht bis zu zwanzig Funk-Runden. Das sind fast sieben Stunden.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Ich rate nie. Ich halbiere. Ich blinke die Mitte. Wird das Licht heller, liegt die Zahl darüber, und die untere Hälfte fällt weg. So finde ich jede Zahl von 1 bis 20 in höchstens 5 Funk-Runden.
 
@@ -4942,7 +4943,7 @@ Ist der Tipp zu klein, kann die Zahl frühestens **eins über** dem Tipp liegen.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Schildi hat das Licht erreicht. Tippe in die Szene, um weiterzulesen.
 
@@ -4988,7 +4989,7 @@ end start "Blättere weiter zu „Die Stimmungen der Glimmis“."
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Die Glimmis antworten auf jede Bewegung von Schildi. Mal leuchten sie grün und werden größer, mal rot und kleiner. Ich habe einen Simulator gebaut. Spiel damit und finde heraus, wie die Glimmis funktionieren.
 
@@ -5075,7 +5076,7 @@ Mit welchen drei Bewegungen werden schläfrige Glimmis vertraut?
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Für jede Stimmung gibt es genau eine Bewegung, die sie freut. Alles andere macht sie wieder schläfrig. Ich habe es mir notiert.
 
@@ -5143,7 +5144,7 @@ Lies die Pfeile im Bild: Von neugierig führt `vor` zu aufgeregt, von aufgeregt 
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{2 Deutsch Male}}--
 Drei Regeln, und der Rest landet im else. Das else ist wichtig. Es sorgt dafür, dass die Glimmis auf jede Bewegung antworten, auch auf eine falsche.
 
@@ -5192,7 +5193,7 @@ Grün heißt: Die Stelle der neuen Stimmung ist **größer**. Rot ist das Gegent
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{3 Deutsch Female}}--
 Farbe, Größe und ein Funkspruch. So versteht jeder die Antwort der Glimmis, auch wer Grün und Rot schlecht unterscheiden kann.
 
@@ -5200,7 +5201,7 @@ Farbe, Größe und ein Funkspruch. So versteht jeder die Antwort der Glimmis, au
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Viele Regeln machen viele elif. Kürzer geht es mit einem Dictionary aus Modul 4. Der Schlüssel ist Stimmung plus Bewegung, der Wert die neue Stimmung.
 
@@ -5297,7 +5298,7 @@ und im Dictionary:
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Die Glimmis haben uns ihre Regeln gezeigt. Jetzt antworten wir. Erfinde dein eigenes Wesen mit eigenen Stimmungen und Regeln. Dann kann jemand anderes herausfinden, wie es funktioniert, so wie wir bei den Glimmis.
 
@@ -5439,7 +5440,7 @@ regeln = {
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Ein gutes Wesen antwortet immer, auch wenn ich etwas falsch mache. Und man kann es verstehen, wenn man lange genug zuschaut. Wie die Glimmis.
 
@@ -5447,7 +5448,7 @@ SCHILDI an ERDE: Ein gutes Wesen antwortet immer, auch wenn ich etwas falsch mac
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Ein paar Ideen, wie dein Wesen noch lebendiger wird. Alles freiwillig. Jede Idee braucht nur ein paar Zeilen.
 
@@ -5479,7 +5480,7 @@ Ein paar Ideen, wie dein Wesen noch lebendiger wird. Alles freiwillig. Jede Idee
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Meine Lampe blinkt rot. Bei Eingaben und Spielregeln verstecken sich neue Fehler. Die meisten melden sich nicht einmal mit einer roten Meldung. Das Spiel macht dann einfach etwas Seltsames.
 
@@ -5531,7 +5532,7 @@ Beide Befehle kommen direkt hinter die Klammer von `input(…)`, mit Punkt davor
 
 ************************************************
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{1 Deutsch Male}}--
 Schildi vergleicht Buchstabe für Buchstabe. Für ihn ist großes V ein anderes Zeichen als kleines v, und ein Leerzeichen ist auch ein Zeichen. Darum räumen strip und lower die Eingabe erst auf. Neu im Fehlerkabinett ist Nummer sieben, der ValueError.
 
@@ -5589,7 +5590,7 @@ Lösch die Zeile `geheim = random.randint(1, 20)` **in** der Schleife. Gewürfel
 
 ************************************************
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{2 Deutsch Female}}--
 In der Schleife wird bei jedem Versuch neu gewürfelt. Dann denkt sich das Licht jedes Mal eine andere Zahl, und kein Hinweis hilft. Einmal würfeln, vor der Schleife, dann bleibt die Zahl fest.
 
@@ -5645,7 +5646,7 @@ Die zweite Regel ändern (oder eine neue Zeile dazu): `"wach+vor": "froh",`
 
 ************************************************
 
-    @VirtualSpeaker.speaker(schildi)
+    @Tharsis.speaker(schildi)
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Zisch war nicht kaputt. Seine Regeln hatten nur eine Sackgasse. Keine rote Meldung, nur ein Wesen, das nie froh wird. Solche Fehler findet man, wenn man die Pfeile aufzeichnet.
 
@@ -5653,7 +5654,7 @@ SCHILDI an ERDE: Zisch war nicht kaputt. Seine Regeln hatten nur eine Sackgasse.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(berg)
+    @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
 Ein freiwilliger Fehler für Profis. Diesmal gibt es eine rote Meldung, und zwar einen alten Bekannten aus dem Fehlerkabinett.
 
@@ -5703,7 +5704,7 @@ def naechste(stimmung, bewegung):
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Bevor sich der Sturm legt, ein letzter Check. Vier Fragen zu Eingaben, Zufall und Regeln. Du kannst alles so oft wiederholen, wie du willst.
 
@@ -5743,7 +5744,7 @@ Ein Wesen hat die Stimmungen still, munter, froh und diese Regeln: `"still+links
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @VirtualSpeaker.speaker(okoye)
+    @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
 Der Sturm lässt nach. Tippe in die Szene, um die Mission zu beenden.
 

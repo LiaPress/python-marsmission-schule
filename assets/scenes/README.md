@@ -63,9 +63,11 @@ Gemeinsame Vorgaben: Illustration für Jugendliche, Retro-Raumfahrtplakat, klare
 ## Technische Grundlage
 
 - [PixiJS-Vorlage 0.5.1: Figuren, Erweiterungen und Animationen](https://github.com/LiaTemplates/pixijs/tree/0.5.1)
-- [Virtual Speaker 0.1.1: eigener Avatar am LiaScript-Sprecher-Hook](https://github.com/LiaTemplates/virtual-speaker/tree/0.1.1)
+- LiaScript-Sprecher-Hook (`LIA.narrator.registerAvatar`): `tharsis.js` meldet das eigene Sprecherbild `tharsis-speaker` direkt an. Das Makro `@Tharsis.speaker(okoye|berg|schildi)` im Kopf von `README.md` legt vor einem Vorlese-Kommentar fest, wer spricht. Die Vorlage „Virtual Speaker“ (2 MB) wird dafür seit Version 1.0.2 nicht mehr gebraucht.
 
 Die eigenen Sprecher zeigen Amara und Jonas frontal. Zwei Bildbögen enthalten je vier Zustände in einem 2 × 2-Raster: ruhend, sprechend, blinzelnd und zwinkernd. Aus dem unveränderten Grundporträt werden nur die Mund- und Augenbereiche ausgetauscht; Kopf, Haare und Schultern bleiben ruhig. Mundbewegungen folgen dem Vorlesestatus und den Wortgrenzen, mit einem rhythmischen Wechsel zwischen offen und geschlossen. Es handelt sich nicht um eine Analyse einzelner Laute.
+
+Das Sprecherbild wirkt wie eine Funkübertragung: feine Bildzeilen, leichtes Rauschen, ein langsam durchlaufender Lichtstreifen und alle 4–10 Sekunden eine kurze Störung, bei der Bildstreifen seitlich verrutschen. Bei „reduzierter Bewegung“ bleiben nur die ruhigen Bildzeilen. Lädt ein Porträt nicht, versucht `tharsis.js` es zweimal erneut und zeigt solange den Kopf aus dem Figurenbogen; fehlt auch dieser, zeigt das Fenster Bildrauschen statt einer leeren Fläche.
 
 Pause, Stopp und Fehler schließen den Mund sofort. Blinzeln erfolgt auch im Ruhezustand in Abständen von ungefähr 3,5–6,5 Sekunden. Nach einem Sprechabschnitt ist gelegentlich ein kurzes Zwinkern möglich, höchstens einmal in 15 Sekunden. Schildi bleibt frontal als Pixel-Display sichtbar und kann ebenfalls blinzeln und zwinkern. Bei reduzierter Bewegung bleiben die Porträts ruhig; die Funkanzeige zeigt den Sprechstatus weiterhin an.
 

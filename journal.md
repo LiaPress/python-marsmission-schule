@@ -11,7 +11,6 @@ import: ./specs/dashboard/README.md
         https://raw.githubusercontent.com/LiaTemplates/Skulpt/0.0.7/README.md
         https://raw.githubusercontent.com/LiaTemplates/mermaid_template/0.1.4/README.md
         https://raw.githubusercontent.com/LiaTemplates/Wikimedia/0.0.2/README.md
-        https://raw.githubusercontent.com/LiaTemplates/virtual-speaker/0.1.1/README.md
         https://raw.githubusercontent.com/LiaTemplates/pixijs/0.5.1/README.md
         ./lia-templates/python-pruefung/README.md
 -->
@@ -896,7 +895,7 @@ Die LiaScript-Vorlagen dieses Projekts werden im Kopf ganz oben in `journal.md` 
 
 Geprüfte Vorlagen stehen im Vorlagenkatalog (`specs/catalog/README.md`); weitere Vorlagen der Gemeinschaft gibt es unter [topics/liascript-template](https://github.com/topics/liascript-template). Eine ausgewählte Vorlage wird mit ihrer `import:`-Zeile in den Projektkopf eingetragen, hier beschrieben und im Material genauso eingebunden. Eine Vorlage, die noch entwickelt wird, steht hier mit einem Steckbrief, bis sie übernommen ist.
 
-* __Template selection:__ done – skulpt, mermaid, wikimedia, virtual-speaker, pixijs, python-pruefung
+* __Template selection:__ done – skulpt, mermaid, wikimedia, pixijs, python-pruefung
 
 <section>
 
@@ -1055,48 +1054,6 @@ Geprüfte Vorlagen stehen im Vorlagenkatalog (`specs/catalog/README.md`); weiter
   1. Die Angaben werden beim Öffnen von Wikimedia geladen; ohne Verbindung fehlen Bild und Angaben ohne sichtbaren Hinweis.
   2. Dateinamen mit `|` funktionieren in der Galerie nicht.
   3. Die Dateinamen setzt der Gestaltungsassistent ein; hier steht nur der Gebrauch.
-
-### Virtual Speaker
-
-* __Catalog id:__ virtual-speaker
-
-* __Source:__ found
-
-* __Import:__
-  `https://raw.githubusercontent.com/LiaTemplates/virtual-speaker/0.1.1/README.md`
-
-* __Header entry:__
-  `import: https://raw.githubusercontent.com/LiaTemplates/virtual-speaker/0.1.1/README.md`
-
-* __Purpose:__
-  Ein animierter Avatar (DiceBear) bewegt beim Vorlesen die Lippen – für vorgelesene Funksprüche von Schildi, Bodenstation und Crew. Neu gefunden, nicht geprüft (Anleitung gelesen).
-
-* __Use when:__
-  1. Ein Funkspruch wird vorgelesen und die sprechende Figur soll sichtbar sein.
-  2. Mehrere Sprecher (Schildi, Bodenstation, Crew) sollen unterscheidbar sein.
-  3. Ein Sprecher soll fest zu einer Vorlesestimme gehören.
-
-* __Basic example:__
-
-  ```markdown
-  @VirtualSpeaker.dicebear(bottts,Schildi)
-  --{{1}}--
-  SCHILDI an ERDE: Hallo!
-  ```
-
-* __How to use:__
-  1. `@VirtualSpeaker.speaker(id)` oder `@VirtualSpeaker.dicebear(stil,seed)` direkt vor einen Vorlese-Kommentar `--{{n}}--` setzen.
-  2. Eigene Sprecher (z. B. `schildi` im Roboter-Stil `bottts`) im Kurs festlegen, nie im Kopf einer Vorlage.
-  3. Der Avatar erscheint im Präsentations- und Folienmodus mit Ton; im Lehrbuchmodus nicht.
-
-* __Special example:__
-
-  `@VirtualSpeaker.speaker(schildi)`
-
-* __Special usage notes:__
-  1. Braucht laut Anleitung eine Vorlese-Schnittstelle, die erst mit der nächsten LiaScript-Version kommt – vor dem ersten Modul ausprobieren.
-  2. Wer still liest, sieht den Avatar nicht – deshalb zusätzlich das Bild der Figur im Text.
-  3. Lippenbewegung nur bei Stilen mit Mund-Varianten; DiceBear-Stile haben eigene Lizenzen.
 
 ### PixiJS Stories
 
