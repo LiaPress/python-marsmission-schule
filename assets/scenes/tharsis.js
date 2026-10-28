@@ -4,8 +4,8 @@
   const calm = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const names = { okoye: 'Kommandantin Amara Okoye', berg: 'Techniker Jonas Berg', schildi: 'Schildi · Borddisplay' };
   let atlasURL = '';
-  const atlas = new Image();
-  const portraits = { okoye: new Image(), berg: new Image() };
+  const atlas = retrying(new Image());
+  const portraits = { okoye: retrying(new Image()), berg: retrying(new Image()) };
   const portraitRegions = {
     okoye: { mouth: [0.40, 0.50, 0.20, 0.115], eyes: [0.35, 0.35, 0.30, 0.13] },
     berg: { mouth: [0.39, 0.475, 0.23, 0.11], eyes: [0.33, 0.31, 0.34, 0.15] }
@@ -15,6 +15,30 @@
     berg: [480, 0, 400, 1024],
     schildi: [880, 320, 656, 680]
   };
+  // Head and shoulders in the atlas: stand-in while a portrait is missing.
+  const atlasHeads = { okoye: [150, 10, 240], berg: [575, 10, 240] };
+
+  // Downloads can fail (e.g. rate limits on raw.githubusercontent.com).
+  // Retry twice; a failed image loads again on the next slide.
+  function retrying(image) {
+    image.addEventListener('error', () => {
+      const base = image.dataset.base;
+      const tries = +(image.dataset.tries || 0);
+      if (!base || tries >= 2) return;
+      image.dataset.tries = tries + 1;
+      setTimeout(() => {
+        if (image.dataset.base === base) image.src = base + (base.includes('?') ? '&' : '?') + 'retry=' + (tries + 1);
+      }, 1500 * (tries + 1));
+    });
+    return image;
+  }
+  function load(image, src) {
+    const failed = image.complete && !image.naturalWidth;
+    if (image.dataset.base === src && !failed) return;
+    image.dataset.base = src;
+    image.dataset.tries = 0;
+    image.src = src;
+  }
 
   // Shared pixel alphabet: the narrator and rover use the same face.
   function pixels(draw, expression, speaking, time = 0, eyes = null) {
@@ -132,6 +156,9 @@
           };
           if (mouth) patch(1, portraitRegions[this.speaker].mouth);
           if (blink || wink) patch(blink ? 2 : 3, portraitRegions[this.speaker].eyes);
+        } else if (atlas.complete && atlas.naturalWidth) {
+          const [x, y, size] = atlasHeads[this.speaker];
+          c.drawImage(atlas, x, y, size, size, 0, 0, 480, 480);
         }
       }
     }
@@ -141,10 +168,9 @@
   window.TharsisVisuals = {
     configure(url) {
       atlasURL = url;
-      if (atlas.src !== url) atlas.src = url;
+      load(atlas, url);
       for (const [id, file] of [['okoye', 'amara-speaker.webp'], ['berg', 'jonas-speaker.webp']]) {
-        const src = new URL(file, url).href;
-        if (portraits[id].src !== src) portraits[id].src = src;
+        load(portraits[id], new URL(file, url).href);
       }
       if (window.LIA?.narrator) window.LIA.narrator.registerAvatar('tharsis-speaker');
     },
