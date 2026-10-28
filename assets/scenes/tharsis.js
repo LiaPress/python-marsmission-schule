@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const calm = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const names = { okoye: 'Kommandantin Amara Okoye', berg: 'Techniker Jonas Berg', schildi: 'Schildi · Borddisplay' };
+  const names = { okoye: 'Kommandantin Amara Okoye', berg: 'Techniker Jonas Berg', schildi: 'Schildi' };
   let atlasURL = '';
   const atlas = retrying(new Image());
   const portraits = { okoye: retrying(new Image()), berg: retrying(new Image()) };
@@ -157,14 +157,14 @@
       this.dataset.mouth = mouth ? 'open' : 'closed';
       this.dataset.eyes = blink ? 'blink' : wink ? 'wink' : 'open';
       c.clearRect(0, 0, 480, 480);
+      if (this.speaker === 'schildi') {
+        // The virtual speaker is the face itself, without a monitor or radio frame.
+        pixels((x, y, w, h, color) => { c.fillStyle = color; c.fillRect(20 + x * 20, 70 + y * 20, w * 20, h * 20); }, 'happy', this.speaking, time, blink ? 'blink' : wink ? 'wink' : null);
+        return;
+      }
       c.fillStyle = '#122438'; c.fillRect(0, 0, 480, 480);
       let signal = true;
-      if (this.speaker === 'schildi') {
-        c.fillStyle = '#FBF7F2'; c.beginPath(); c.roundRect(35, 75, 410, 295, 40); c.fill();
-        c.fillStyle = '#091321'; c.beginPath(); c.roundRect(55, 95, 370, 250, 25); c.fill();
-        pixels((x, y, w, h, color) => { c.fillStyle = color; c.fillRect(74 + x * 15, 100 + y * 15, w * 15, h * 15); }, 'happy', this.speaking, time, blink ? 'blink' : wink ? 'wink' : null);
-        c.fillStyle = '#FFB36B'; c.fillRect(210, 390, 60, 10);
-      } else {
+      {
         const portrait = portraits[this.speaker];
         if (portrait?.complete && portrait.naturalWidth) {
           const w = portrait.naturalWidth / 2;

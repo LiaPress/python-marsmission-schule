@@ -1,7 +1,7 @@
 <!--
 author:   André Dietrich
 email:    LiaScript@web.de
-version:  1.0.4
+version:  1.0.5
 language: de
 narrator: Deutsch Female
 mode:     Presentation
