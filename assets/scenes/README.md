@@ -63,7 +63,7 @@ Gemeinsame Vorgaben: Illustration für Jugendliche, Retro-Raumfahrtplakat, klare
 ## Technische Grundlage
 
 - [PixiJS-Vorlage 0.5.1: Figuren, Erweiterungen und Animationen](https://github.com/LiaTemplates/pixijs/tree/0.5.1)
-- LiaScript-Sprecher-Hook (`LIA.narrator.registerAvatar`): `tharsis.js` meldet das eigene Sprecherbild `tharsis-speaker` direkt an. Das Makro `@Tharsis.speaker(okoye|berg|schildi)` im Kopf von `README.md` legt vor einem Vorlese-Kommentar fest, wer spricht. Die Vorlage „Virtual Speaker“ (2 MB) wird dafür seit Version 1.0.2 nicht mehr gebraucht.
+- LiaScript-Sprecher-Hook (`LIA.narrator.registerAvatar`): `tharsis.js` meldet das eigene Sprecherbild `tharsis-speaker` direkt an. Das Makro `@Tharsis.speaker(okoye|berg)` im Kopf von `README.md` legt vor einem Vorlese-Kommentar fest, wer spricht. Schildi hat ein eigenes Makro `@Tharsis.schildi`, das zusätzlich die Stimme verändert (`data-pitch="2"`, `data-rate="1.05"`), damit er sich von Jonas abhebt – beide nutzen „Deutsch Male“. Die Vorlage „Virtual Speaker“ (2 MB) wird dafür seit Version 1.0.2 nicht mehr gebraucht.
 
 Die eigenen Sprecher zeigen Amara und Jonas frontal. Zwei Bildbögen enthalten je vier Zustände in einem 2 × 2-Raster: ruhend, sprechend, blinzelnd und zwinkernd. Aus dem unveränderten Grundporträt werden nur die Mund- und Augenbereiche ausgetauscht; Kopf, Haare und Schultern bleiben ruhig. Mundbewegungen folgen dem Vorlesestatus und den Wortgrenzen, mit einem rhythmischen Wechsel zwischen offen und geschlossen. Es handelt sich nicht um eine Analyse einzelner Laute.
 

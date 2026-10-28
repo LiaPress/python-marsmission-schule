@@ -1,7 +1,7 @@
 <!--
 author:   André Dietrich
 email:    LiaScript@web.de
-version:  1.0.3
+version:  1.0.4
 language: de
 narrator: Deutsch Female
 mode:     Presentation
@@ -25,6 +25,8 @@ link:     https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@40
           ./assets/scenes/tharsis.css
 
 @Tharsis.speaker: <!-- data-speaker="@0" -->
+
+@Tharsis.schildi: <!-- data-speaker="schildi" data-pitch="2" data-rate="1.05" -->
 
 @Tharsis.init
 <script>
@@ -319,7 +321,7 @@ Das ist ein Code-Kasten. Darin steht ein Programm, also eine Liste von Befehlen 
       {{2}}
 **Funkspruch:** Was dein Programm sendet, erscheint direkt unter dem Kasten.
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Alles, was du sendest, erscheint unter dem Kasten. So höre ich dich. Schau, unter dem Kasten steht jetzt dein Testfunkspruch. Bitte sprich immer deutlich. Ich nehme alles wörtlich.
 
@@ -352,7 +354,7 @@ Der zweite verrät schon mehr. Auf den nächsten Seiten helfen sie dir bei den A
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{4 Deutsch Male}}--
 SCHILDI an ERDE: In meinem Speicher habe ich alte Notizen gefunden. Ich nenne sie Speicherfunde. Klapp einen auf, dann siehst du, wie das aussieht. Wenn du später festhängst, helfen sie dir. Aber probier es bitte zuerst selbst. Ich lerne auch lieber, wenn ich selbst darauf komme.
 
@@ -400,7 +402,7 @@ erwarte(ausgabe().strip() != "", "Schildi hat nichts empfangen – steht dein Te
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Das Wort print bedeutet: Gib das aus. Alles zwischen den Anführungszeichen schicke ich weiter. Probier es aus! Und dann ändere den Text – ich will hören, was du mir sagst.
 
@@ -456,7 +458,7 @@ erwarte("___" not in ausgabe(), "Ersetze die drei Striche ___ durch deinen Text.
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Ich möchte wissen, wer du bist! Schick mir zwei Funksprüche: zuerst deinen Namen, dann einen Gruß. Dafür brauchst du zwei Zeilen – jede mit ihrem eigenen print.
 
@@ -489,7 +491,7 @@ Keine Angst vor Rot! Eine Fehlermeldung ist ein **abgefangener Funkspruch** von 
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Rot! Rot! Meine Statuslampe blinkt rot. Das ist eine Fehlermeldung. Für mich ist das wie ein abgefangener Brief von Python. Die Zeilennummer verrät den Absender, also wo das Problem sitzt. Die Fehlerart ist der Betreff. Und die letzte Zeile ist die eigentliche Nachricht.
 
@@ -530,7 +532,7 @@ Jetzt reparierst du das Programm. Schau genau hin: Python braucht bei einem Text
 > [!NOTE] 🗄️ Fehlerkabinett – Nr. 1
 > **SyntaxError** – Python versteht die Schreibweise nicht. Oft fehlt ein Anführungszeichen oder eine Klammer.
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Diesen Fehler hebe ich auf! Ich sammle alle Fehlerarten in meinem Fehlerkabinett. Das hier ist Nummer eins: der SyntaxError. Er heißt: Die Schreibweise stimmt nicht.
 
@@ -765,7 +767,7 @@ Du kannst eine Notiz überschreiben: Schreib einfach noch einmal `akku = …` mi
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Ich bin gefahren und mein Akku ist leerer geworden. Du kannst eine Notiz überschreiben. Dann vergesse ich den alten Wert und merke mir den neuen.
 
@@ -827,7 +829,7 @@ Kleine Denkaufgabe: Was steht am Ende im Notizbuch? Und im Extra bekommt Schildi
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Ich bin zwölf Meter gefahren, dann acht, dann fünfzehn. Wie weit war das insgesamt? Ich rechne nicht gern im Kopf. Kannst du mir das ausrechnen lassen?
 
@@ -1008,7 +1010,7 @@ Wie oft passt die 2 in die 50? Dafür gibt es eine Rechenart.
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Elf Komma sechs sechs sechs? Ein Komma? Ach so, geteilt durch gibt immer eine Kommazahl. Und Python schreibt einen Punkt statt eines Kommas. Merke ich mir.
 
@@ -1155,7 +1157,7 @@ In die Klammer von `len()` gehört die Variable.
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Piep, piep, piep! Mit dem Malzeichen wiederhole ich einen Text. Und im Extra zählst du, wie viele Zeichen mein Name hat.
 
@@ -1304,7 +1306,7 @@ Ein Quadrat hat 4 Seiten – es fehlen noch dreimal `forward(seite)` und `left(9
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Mit der Variablen seite muss ich die Zahl nur einmal ändern. Probier es aus: Schreib oben neunzig statt sechzig, dann wird die ganze Markierung größer.
 
@@ -1367,7 +1369,7 @@ Jetzt wird es kniffliger: ein Dreieck. Überleg genau, wie weit sich Schildi an 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Drei Funksprüche sind kaputt angekommen. Meine Lampe blinkt rot. Hilfst du mir, sie zu reparieren?
 
@@ -1413,7 +1415,7 @@ Vergleiche den Namen in Zeile 1 und Zeile 2 Buchstabe für Buchstabe.
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Name-Fehler! Python kannte den Namen nicht, nur weil ein Buchstabe fehlte. Das kommt in mein Fehlerkabinett, Nummer zwei.
 
@@ -1808,7 +1810,7 @@ Bei der Reihenfolge kommt es auf das Einrücken an. Wer mehr will, findet auf de
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Für alle, die noch Akku übrig haben. Hier entscheide ich zwischen drei Fällen, und einmal müssen zwei Dinge gleichzeitig stimmen. Alles freiwillig.
 
@@ -1878,7 +1880,7 @@ Gesucht ist das englische Wort für „und“.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Für das Quadrat hast du mir viermal dasselbe geschickt. Vier Funkpakete! Gibt es einen Befehl für: Mach das viermal?
 
@@ -1996,7 +1998,7 @@ Auf dem ganzen Weg dreht sich Schildi einmal ganz herum: 360 Grad, verteilt auf 
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Ein Paket für ein ganzes Sechseck! Akku: zufrieden. Auf der nächsten Seite warten ein Stern und eine Spirale, für alle, die mehr wollen.
 
@@ -2155,7 +2157,7 @@ Die Zeile fahrten gleich fahrten plus eins ist ein Zähler. In jeder Runde kommt
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Zehn, neun, acht … Start! Wenn ich vergesse, die Zahl kleiner zu machen, zähle ich für immer. Dann stoppe ich nach fünf Sekunden und melde mich.
 
@@ -2315,7 +2317,7 @@ erwarte("4" in ausgabe(), "Gib mit len(proben) aus, wie viele Proben es sind.")
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Fach null: Basalt. Fach eins: Eis. Komisch, bei euch auf der Erde fängt man bei eins an. Ich merke es mir.
 
@@ -2490,7 +2492,7 @@ Ausweichen, wenn der Abstand kleiner als 10 ist – wie auf „Schildi entscheid
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Fahren, ausweichen, fahren, ausweichen, fahren. Ich habe fünfmal selbst entschieden, ohne einen einzigen Funkspruch zur Erde.
 
@@ -2577,7 +2579,7 @@ Unter `else:` gehört der Befehl fürs Geradeausfahren – eingerückt.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Berg hat mir einen neuen Sensor eingebaut! Er schaut in einem Viertelkreis nach vorn. Liegt dort ein Felsen, leuchtet er rot. Ich frage ihn mit schildi punkt hindernis.
 
@@ -2679,7 +2681,7 @@ Jetzt fährt Schildi ganz allein durchs Kraterfeld. Bei jedem Schritt fragt er s
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Zwei freiwillige Aufträge. Zuerst zählst du, wie oft ich ausweichen musste. Dann fahre ich bis vor einen Felsen und genauso weit wieder zurück.
 
@@ -2766,7 +2768,7 @@ Die Zahl der Schritte hat Schildi sich in einer Variablen gemerkt. Im Prüflauf 
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Meine Lampe blinkt rot. Ein paar Funksprüche sind kaputt angekommen. Diesmal geht es um Doppelpunkte, Einrücken und Schleifen.
 
@@ -2854,7 +2856,7 @@ Zwei neue Fehlerarten für Schildis Kabinett – du triffst sie bei Schleifen un
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Zwei neue Fehler für mein Kabinett: Nummer vier, die Schleife ohne Ende, und Nummer fünf, die Probe, die es nicht gibt. Auf der nächsten Seite kannst du beide reparieren.
 
@@ -3039,7 +3041,7 @@ for t in temperaturen:
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Das Meisterstück! Eine Schleife in einer Schleife. Ich zeichne sechs Sechsecke wie eine Blume in den Staub. Das ist freiwillig, aber es sieht großartig aus.
 
@@ -3247,7 +3249,7 @@ Ein Befehl läuft erst, wenn man ihn aufruft – mit Namen und Klammern, nicht e
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Erst wenn du melden mit Klammern schreibst, melde ich mich. Ein angelegter Befehl allein tut gar nichts.
 
@@ -3303,7 +3305,7 @@ Der Befehl ecke kennt eine Seite und eine Ecke. Die Schleife ruft ihn viermal au
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Für den Hang brauche ich ein Zickzack-Manöver. Baust du es mir? Freiwillig.
 
@@ -3414,7 +3416,7 @@ Die Zahl in der Klammer des Aufrufs landet in `seite`.
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Ein Befehl, zwei Größen. Beim ersten Aufruf ist seite vierzig, beim zweiten achtzig.
 
@@ -3483,7 +3485,7 @@ Teile den Akku durch 2 und gib das Ergebnis mit `return` zurück – eingerückt
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Die Prüfung hat mich gerade dreimal gefragt, mit fünfzig, achtzig und null. Mit return bekommt sie jedes Mal eine Antwort. Mit print hätte ich nur laut gedacht.
 
@@ -3655,7 +3657,7 @@ Neu eintragen wie eine Variable: links der Katalog mit dem neuen Schlüssel in e
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Mein Katalog wächst! Ich schlage den Namen nach und finde sofort das Gewicht. Bei einer Liste müsste ich Fach für Fach suchen.
 
@@ -3781,7 +3783,7 @@ erwarte(gewicht("Eis") == 1, "Bekannte Proben sollen weiter ihr Gewicht liefern.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Die Eiskristalle leuchten mal hier, mal dort. Ich kann nicht vorhersagen, welcher als Nächstes aufleuchtet. Das ist Zufall. Und Python kann auch würfeln.
 
@@ -3899,7 +3901,7 @@ Nord, Ost, Süd oder West: Welcher Kristall leuchtet, entscheidet der Zufall. F�
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Zwei freiwillige Zufallsaufträge. Ich mache einen Spaziergang, bei dem eine Münze entscheidet, wohin ich abbiege. Und ich zähle, wie oft eine Sechs fällt.
 
@@ -4039,7 +4041,7 @@ Wie auf „Schildis Sensor“ in Modul 3: fahren, solange **kein** Felsen da ist
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Fahre bis zum Felsen. Weiche aus. Fahre bis zum Felsen. Weiche aus. So liest sich mein Programm jetzt, und im anderen Feld klappt es genauso.
 
@@ -4100,7 +4102,7 @@ Die Schleife soll so oft laufen, wie die Zutat sagt – schreib ihren Namen in d
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Meine Lampe blinkt rot. Diesmal stecken die Fehler in meinen eigenen Befehlen und im Katalog. Einer davon meldet sich nicht einmal mit einer roten Meldung.
 
@@ -4211,7 +4213,7 @@ Groß- und Kleinschreibung zählt. Vergleiche den Schlüssel Buchstabe für Buch
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{2 Deutsch Male}}--
 SCHILDI an ERDE: Eis mit kleinem e steht nicht in meinem Katalog. Für mich sind das zwei verschiedene Wörter. Das kommt ins Fehlerkabinett, Nummer sechs.
 
@@ -4372,7 +4374,7 @@ def bewerte(probe):
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Das Meisterstück! Ich zeichne ein Kristallfeld: fünf Sterne an zufälligen Stellen. Dafür hebe ich meinen Stift, fahre an eine Stelle und setze ihn wieder ab.
 
@@ -4594,7 +4596,7 @@ Text steht in Anführungszeichen, und `==` vergleicht ihn Buchstabe für Buchsta
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Ich vergleiche Buchstabe für Buchstabe. Vor mit großem V wäre für mich ein anderer Befehl. Dann warte ich lieber.
 
@@ -4723,7 +4725,7 @@ Noch ein `elif` mit demselben Aufbau wie bei `links` – eingerückt wie die and
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Das blaue Licht blinkt. Wenn ich mit meiner Lampe blinke, antwortet es. Blinke ich zu wenig, wird es heller. Blinke ich zu viel, wird es dunkler. Ich glaube, es denkt sich eine Zahl.
 
@@ -4887,7 +4889,7 @@ Wer wild rät, braucht bis zu zwanzig Funk-Runden. Das sind fast sieben Stunden.
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Ich rate nie. Ich halbiere. Ich blinke die Mitte. Wird das Licht heller, liegt die Zahl darüber, und die untere Hälfte fällt weg. So finde ich jede Zahl von 1 bis 20 in höchstens 5 Funk-Runden.
 
@@ -5076,7 +5078,7 @@ Mit welchen drei Bewegungen werden schläfrige Glimmis vertraut?
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Für jede Stimmung gibt es genau eine Bewegung, die sie freut. Alles andere macht sie wieder schläfrig. Ich habe es mir notiert.
 
@@ -5440,7 +5442,7 @@ regeln = {
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{1 Deutsch Male}}--
 SCHILDI an ERDE: Ein gutes Wesen antwortet immer, auch wenn ich etwas falsch mache. Und man kann es verstehen, wenn man lange genug zuschaut. Wie die Glimmis.
 
@@ -5480,7 +5482,7 @@ Ein paar Ideen, wie dein Wesen noch lebendiger wird. Alles freiwillig. Jede Idee
 
 @[Tharsis.init](./assets/images/tharsis-crew.webp)
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{0 Deutsch Male}}--
 SCHILDI an ERDE: Meine Lampe blinkt rot. Bei Eingaben und Spielregeln verstecken sich neue Fehler. Die meisten melden sich nicht einmal mit einer roten Meldung. Das Spiel macht dann einfach etwas Seltsames.
 
@@ -5646,7 +5648,7 @@ Die zweite Regel ändern (oder eine neue Zeile dazu): `"wach+vor": "froh",`
 
 ************************************************
 
-    @Tharsis.speaker(schildi)
+    @Tharsis.schildi
     --{{3 Deutsch Male}}--
 SCHILDI an ERDE: Zisch war nicht kaputt. Seine Regeln hatten nur eine Sackgasse. Keine rote Meldung, nur ein Wesen, das nie froh wird. Solche Fehler findet man, wenn man die Pfeile aufzeichnet.
 
