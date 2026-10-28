@@ -6,7 +6,7 @@ language: de
 narrator: Deutsch Female
 mode:     Presentation
 dark:     true
-logo:     ./assets/images/kurslogo.webp
+logo:     ./assets/images/kurscover.webp
 icon:     ./assets/images/kursicon.png
 comment:  Lerne Python mit Mars-Rover Schildi: ein interaktiver Selbstlernkurs ab Klasse 7 ohne Vorkenntnisse. Fünf Module mit Turtle-Grafik, automatischen Rückmeldungen, animierten Geschichten und eigenem Abschlussspiel – direkt im Browser, ohne Installation.
 tags:     Python, Programmieren lernen, Informatik, Schule, Sekundarstufe I, Klasse 7, Selbstlernkurs, Turtle-Grafik, Marsmission, Deutsch, LiaScript, OER, Open Educational Resources
@@ -183,8 +183,8 @@ details, .lia-quote, .lia-code__input, .lia-table-responsive, .lia-card {
 
 # Programmieren lernen mit Python – Schulversion
 
-<!-- style="width:160px;max-width:40%;display:block;margin:0 auto 1rem;" -->
-![Kurslogo: Schildi vor dem Mars, seine Fahrspur endet im Python-Symbol >>>](assets/images/kurslogo.webp)
+<!-- style="width:960px;max-width:100%;display:block;margin:0 auto 1rem;" -->
+![Kursbild: Programmieren lernen mit Python – Schulversion. Schildi erkundet die Marslandschaft vor der Forschungsstation.](assets/images/kurscover.webp)
 
 <!--- Turtle-Sprite: lia-templates/python-pruefung/assets/schildi-oben.png wird durch python-pruefung.js als selbstständige SVG-Bildform eingebettet, einschließlich der Sensorvarianten. --->
 

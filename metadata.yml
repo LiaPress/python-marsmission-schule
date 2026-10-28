@@ -26,7 +26,7 @@ inLanguage:
 about:
   - "https://w3id.org/kim/hochschulfaechersystematik/n079"
 
-image: "https://raw.githubusercontent.com/LiaPress/python-marsmission-schule/main/assets/images/kurslogo.png"
+image: "https://raw.githubusercontent.com/LiaPress/python-marsmission-schule/main/assets/images/kurscover.png"
 
 learningResourceType:
   - "https://w3id.org/kim/hcrt/course"

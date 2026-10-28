@@ -30,6 +30,7 @@ assets/images/*.png
 !assets/images/kurslogo.png
 !assets/images/kurslogo-original.png
 !assets/images/kursicon.png
+!assets/images/kurscover.png
 assets/scenes/sprecher-vorschau.gif
 assets/theme/schildi-mars.json
 lia-templates/python-pruefung/assets/schildi-oben-original.png

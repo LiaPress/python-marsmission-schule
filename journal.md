@@ -652,12 +652,14 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
   4. Mood: abenteuerlich, einladend, nicht kindlich
   5. Additional notes: auch klein (Favicon) gut erkennbar; keine Schrift im Bildzeichen nötig
 
-* __Course Logo:__ Erstellt mit dem eingebauten Bildgenerator anhand des neuen Schildi-Figurenbogens: Solar-Rover mit Pixelgesicht vor einem rostroten Marskreis, Fahrspur mit dem Python-Symbol `>>>`. Transparenter Hintergrund. In der Kursdatei als Logo, Startseitenbild und kleines Icon eingebunden. PNG und WebP, kein Vektor-SVG.
+* __Course Logo:__ Breites Kursbild im Format 16:9 (1600 × 900), erstellt am 28.10.2026 mit dem eingebauten Bildgenerator anhand des bisherigen Schildi-Bildzeichens: Kurstitel vor Marslandschaft, Schildi, Forschungsstation und Fahrspur mit `>>>`. Als `logo:` und Startseitenbild eingebunden; PNG für GitHub und Metadaten, WebP für den Kurs. Das bisherige quadratische Bildzeichen bleibt als Icon (`icon: kursicon.png`) erhalten.
+  - [Kursbild für GitHub als PNG](assets/images/kurscover.png)
+  - [Kursbild als WebP](assets/images/kurscover.webp)
   - [Logo als PNG](assets/images/kurslogo.png)
   - [Hochauflösendes Original](assets/images/kurslogo-original.png)
   - [Kurs-Icon](assets/images/kursicon.png)
 
-![Kurslogo mit Schildi und Python-Fahrspur](assets/images/kurslogo.webp)
+![Kursbild mit Kurstitel, Schildi und Marslandschaft im Format 16:9](assets/images/kurscover.webp)
 
 * __Default Logo Prompt Base:__
   "A flat, retro space-poster style logo for an educational Python course, featuring a friendly turtle-shaped Mars rover seen from the side whose trail curves into a Python prompt '>>>', rust orange, night blue and ice blue on warm off-white, clean and scalable design, suitable for digital and print use."
@@ -688,7 +690,7 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
 * __Image Specifications:__
   - Aspect ratio: 16:9 (Szenen, Kapitelbilder); 1:1 für Figurenbilder neben Funksprüchen
   - Resolution: 1600 × 900 (16:9), 512 × 512 (1:1)
-  - Format: PNG-Originale, komprimiertes WebP für Szenen und Figuren; SVG für Logo
+  - Format: PNG-Originale, komprimiertes WebP für Szenen und Figuren; Kursbild als PNG und WebP (16:9), Icon als PNG mit Transparenz
   - Accessibility: Include meaningful alt text descriptions
 
 * __Image Consistency Rules:__
