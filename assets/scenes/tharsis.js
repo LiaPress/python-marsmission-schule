@@ -186,23 +186,47 @@
       }
       this.interference(c, time, reduced, signal);
     }
-    // Radio look: scanlines always; grain, a rolling bar and short glitches
-    // only with motion allowed. Without a picture the window shows snow.
+    // Radio look: scanlines always; grain, a rolling bar, tiny line jitter and
+    // glitches every 1.5–5 s only with motion allowed. No bright flashes.
+    // Without a picture the window shows snow.
     interference(c, time, reduced, signal) {
       if (!reduced) {
-        if (!this.nextGlitch) this.nextGlitch = time + 2000 + Math.random() * 4000;
+        if (!this.nextGlitch) this.nextGlitch = time + 1000 + Math.random() * 2000;
         if (time >= this.nextGlitch) {
-          this.glitchUntil = time + 120 + Math.random() * 280;
-          this.nextGlitch = time + 4000 + Math.random() * 6000;
+          const types = ['bands', 'bands', 'tear', 'ghost', 'roll', 'dropout'];
+          const type = types[Math.floor(Math.random() * types.length)];
+          this.glitch = {
+            type,
+            until: time + (type === 'dropout' ? 250 + Math.random() * 350 : 120 + Math.random() * 380),
+            shift: (Math.random() < 0.5 ? -1 : 1) * (6 + Math.random() * 18),
+            y: 120 + Math.random() * 280,
+            drop: 20 + Math.random() * 60
+          };
+          this.nextGlitch = time + 1500 + Math.random() * 3500;
         }
-        const glitch = time < (this.glitchUntil || 0);
-        if (glitch) {
+        const g = this.glitch && time < this.glitch.until ? this.glitch : null;
+        const glitch = !!g;
+        const copy = (y, h, dx) => c.drawImage(this.canvas, 0, y, 480, h, dx, y, 480, h);
+        const side = () => (Math.random() < 0.5 ? -1 : 1);
+        if (g?.type === 'bands') {
           // Shift a few horizontal bands sideways.
-          for (let i = 0; i < 3; i++) {
-            const y = Math.random() * 460, h = 6 + Math.random() * 34;
-            const dx = (Math.random() < 0.5 ? -1 : 1) * (8 + Math.random() * 32);
-            c.drawImage(this.canvas, 0, y, 480, h, dx, y, 480, h);
-          }
+          const n = 2 + Math.floor(Math.random() * 4);
+          for (let i = 0; i < n; i++) copy(Math.random() * 460, 6 + Math.random() * 34, side() * (8 + Math.random() * 32));
+        } else if (g?.type === 'tear') {
+          // Everything below one line slips sideways.
+          copy(g.y, 480 - g.y, g.shift * 1.5);
+          c.fillStyle = 'rgba(230,241,250,0.3)'; c.fillRect(0, g.y, 480, 2);
+        } else if (g?.type === 'ghost') {
+          // A faint second image, slightly offset.
+          c.save(); c.globalAlpha = 0.35; c.globalCompositeOperation = 'screen';
+          c.drawImage(this.canvas, g.shift, 0); c.restore();
+        } else if (g?.type === 'roll') {
+          // The picture slips down; the gap shows the dark sync bar.
+          c.drawImage(this.canvas, 0, 0, 480, 480 - g.drop, 0, g.drop, 480, 480 - g.drop);
+          c.fillStyle = '#091321'; c.fillRect(0, 0, 480, g.drop);
+        } else if (!g && Math.random() < 0.05) {
+          // Tiny jitter of a thin line between the glitches.
+          copy(Math.random() * 476, 2 + Math.random() * 4, side() * (3 + Math.random() * 8));
         }
         const barY = (time / 9) % 600 - 60;
         const bar = c.createLinearGradient(0, barY, 0, barY + 60);
@@ -213,7 +237,7 @@
         if (!this.patterns) this.patterns = noiseTiles().map(tile => c.createPattern(tile, 'repeat'));
         const ox = Math.random() * 256, oy = Math.random() * 256;
         c.save();
-        c.globalAlpha = !signal ? 0.5 : glitch ? 0.22 : 0.07;
+        c.globalAlpha = !signal ? 0.5 : g?.type === 'dropout' ? 0.45 : glitch ? 0.2 : 0.07;
         c.globalCompositeOperation = signal && !glitch ? 'overlay' : 'source-over';
         c.translate(-ox, -oy); c.scale(2, 2);
         c.fillStyle = this.patterns[Math.floor(time / 80) % this.patterns.length];
