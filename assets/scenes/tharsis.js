@@ -3,9 +3,15 @@
   'use strict';
   const calm = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const names = { okoye: 'Kommandantin Amara Okoye', berg: 'Techniker Jonas Berg', schildi: 'Schildi' };
-  let atlasURL = '';
-  const atlas = retrying(new Image());
-  const portraits = { okoye: retrying(new Image()), berg: retrying(new Image()) };
+  // LiaScript may run this file twice (on a reload: the cached course, then the
+  // fresh one). The speaker element is defined only by the first run, so all
+  // runs share one set of images and the atlas address.
+  const shared = window.__tharsisShared || (window.__tharsisShared = {
+    atlasURL: '',
+    atlas: retrying(new Image()),
+    portraits: { okoye: retrying(new Image()), berg: retrying(new Image()) }
+  });
+  const { atlas, portraits } = shared;
   const portraitRegions = {
     okoye: { mouth: [0.40, 0.50, 0.20, 0.115], eyes: [0.35, 0.35, 0.30, 0.13] },
     berg: { mouth: [0.39, 0.475, 0.23, 0.11], eyes: [0.33, 0.31, 0.34, 0.15] }
@@ -252,7 +258,7 @@
 
   window.TharsisVisuals = {
     configure(url) {
-      atlasURL = url;
+      shared.atlasURL = url;
       load(atlas, url);
       for (const [id, file] of [['okoye', 'amara-speaker.webp'], ['berg', 'jonas-speaker.webp']]) {
         load(portraits[id], new URL(file, url).href);
@@ -266,7 +272,7 @@
   function plugin(LiaPixi) {
     LiaPixi.defineActor('tharsis', async ({ PIXI }, def) => {
       const id = def.kv.person || def.id;
-      const source = await PIXI.Assets.load(atlasURL);
+      const source = await PIXI.Assets.load(shared.atlasURL);
       const frame = frames[id];
       if (!frame) throw new Error('Unbekannte Tharsis-Figur: ' + id);
       const radio = id !== 'schildi' && def.kv.mode !== 'room';
@@ -278,7 +284,7 @@
       const sprite = new PIXI.Sprite(texture);
       sprite.anchor.set(0.5, 1);
       if (radio) {
-        const station = await PIXI.Assets.load(new URL('station-tharsis.webp', atlasURL).href);
+        const station = await PIXI.Assets.load(new URL('station-tharsis.webp', shared.atlasURL).href);
         const panel = new PIXI.Container();
         const background = new PIXI.Sprite(station);
         background.anchor.set(0.5, 1);
