@@ -1,7 +1,7 @@
 <!--
 author:   André Dietrich
 email:    LiaScript@web.de
-version:  1.0.7
+version:  1.0.8
 language: de
 narrator: Deutsch Female
 mode:     Presentation
@@ -14,7 +14,7 @@ repository: https://github.com/LiaPress/python-marsmission-schule
 attribute: Kursinhalte © André Dietrich, lizenziert unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de) – siehe [LICENSE](./LICENSE).
            Figuren, Szenenhintergründe, Sprecherporträts und Logo wurden für diesen Kurs KI-gestützt erstellt. Die technische Journal-Anzeige stammt aus [Teaching-Agent](https://github.com/LiaScript/teaching-agent); der vorhandene Lizenztext liegt unter [assets/LICENSE-teaching-agent.txt](./assets/LICENSE-teaching-agent.txt).
 
-import:   https://raw.githubusercontent.com/LiaTemplates/pixijs/0.5.1/README.md
+import:   https://raw.githubusercontent.com/LiaTemplates/pixijs/0.5.2/README.md
           https://raw.githubusercontent.com/LiaTemplates/Skulpt/0.0.7/README.md
           https://raw.githubusercontent.com/LiaTemplates/mermaid_template/0.1.4/README.md
           ./lia-templates/python-pruefung/README.md
