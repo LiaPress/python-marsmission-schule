@@ -652,14 +652,13 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
   4. Mood: abenteuerlich, einladend, nicht kindlich
   5. Additional notes: auch klein (Favicon) gut erkennbar; keine Schrift im Bildzeichen nötig
 
-* __Course Logo:__ Breites Kursbild im Format 16:9 (1600 × 900), erstellt am 28.10.2026 mit dem eingebauten Bildgenerator anhand des bisherigen Schildi-Bildzeichens: Kurstitel vor Marslandschaft, Schildi, Forschungsstation und Fahrspur mit `>>>`. Als `logo:` und Startseitenbild eingebunden; PNG für GitHub und Metadaten, WebP für den Kurs. Das bisherige quadratische Bildzeichen bleibt als Icon (`icon: kursicon.png`) erhalten.
-  - [Kursbild für GitHub als PNG](assets/images/kurscover.png)
-  - [Kursbild als WebP](assets/images/kurscover.webp)
+* __Course Logo:__ Breites Kursbild im Format 16:9 (1600 × 900), erstellt am 28.10.2026 mit dem eingebauten Bildgenerator anhand des bisherigen Schildi-Bildzeichens: Kurstitel vor Marslandschaft, Schildi, Forschungsstation und Fahrspur mit `>>>`. Als `logo:` und Startseitenbild eingebunden. Seit 30.10.2026 lädt der Kurs nur noch PNG (1280 × 720, 256 Farben, mit pngout optimiert), weil H5P kein WebP darstellt; die Rohfassung liegt lokal unter `assets/images/original/`. Das bisherige quadratische Bildzeichen bleibt als Icon (`icon: kursicon.png`) erhalten.
+  - [Kursbild als PNG](assets/images/kurscover.png)
   - [Logo als PNG](assets/images/kurslogo.png)
   - [Hochauflösendes Original](assets/images/kurslogo-original.png)
   - [Kurs-Icon](assets/images/kursicon.png)
 
-![Kursbild mit Kurstitel, Schildi und Marslandschaft im Format 16:9](assets/images/kurscover.webp)
+![Kursbild mit Kurstitel, Schildi und Marslandschaft im Format 16:9](assets/images/kurscover.png)
 
 * __Default Logo Prompt Base:__
   "A flat, retro space-poster style logo for an educational Python course, featuring a friendly turtle-shaped Mars rover seen from the side whose trail curves into a Python prompt '>>>', rust orange, night blue and ice blue on warm off-white, clean and scalable design, suitable for digital and print use."
@@ -690,7 +689,7 @@ Hier wächst dein Kursplan. Du bringst deine Idee mit; der Assistent im Chat hil
 * __Image Specifications:__
   - Aspect ratio: 16:9 (Szenen, Kapitelbilder); 1:1 für Figurenbilder neben Funksprüchen
   - Resolution: 1600 × 900 (16:9), 512 × 512 (1:1)
-  - Format: PNG-Originale, komprimiertes WebP für Szenen und Figuren; Kursbild als PNG und WebP (16:9), Icon als PNG mit Transparenz
+  - Format: nur PNG (kein WebP, H5P-Export): Rohfassungen lokal in `assets/images/original/`, im Kurs 256-Farben-PNG mit pngout optimiert (Hintergründe und Kursbild 1280 × 720); Icon als PNG mit Transparenz
   - Accessibility: Include meaningful alt text descriptions
 
 * __Image Consistency Rules:__
@@ -1430,13 +1429,13 @@ Hinweis: Nach der Faustregel dauert das Modul eher eine halbe Stunde als eine St
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Funkkontakt; Schildi antwortet – Figuren und Szenenhintergründe
-* __File:__ assets/images/tharsis-crew.webp
+* __File:__ assets/images/tharsis-crew.png
 * __Alt text:__ Amara Okoye mit Tablet, Jonas Berg mit Werkzeug und Schildi als Solar-Rover mit Pixelgesicht.
 * __Prompt:__ Einheitliches Retro-Raumfahrt-Ensemble für Jugendliche: Amara mit dunkler Haut und Lockenknoten, Jonas mit kupferbraunem Haar und runder Brille, beide im cremefarbenen und petrolfarbenen Fluganzug; Schildi als schildkrötenförmiger Solar-Rover mit cyanfarbenem Pixelgesicht. Vollständige Bildvorgaben: [Figuren und Szenen](assets/scenes/README.md).
 * __Implementation:__ Landestelle, Stationskontrollraum; eigene PixiJS-Figuren und Effekte in assets/scenes/tharsis.js. Menschen in Außenansichten nur als gerahmte Funkbilder aus der Station. Schildi bleibt draußen.
 * __Technical recheck:__ Kursdarstellung bei 1280 × 900 und 390 × 844 geprüft: keine fehlenden Bilder, keine Laufzeitfehler. Elf Geschichten mit PixiJS 0.5.1 ohne Parserfehler. Keine erneute didaktische Gesamtvalidierung.
 
-![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.webp)
+![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.png)
 
 </section>
 
@@ -1446,11 +1445,11 @@ Hinweis: Nach der Faustregel dauert das Modul eher eine halbe Stunde als eine St
 
 * __Status:__ generated
 * __Source:__ generated
-* __File:__ assets/images/mars-landestelle.webp
+* __File:__ assets/images/mars-landestelle.png
 * __Alt text:__ Landestelle mit Station, Reifenspuren und roten Marsbergen.
 * __Prompt:__ Wide retro space-poster Mars landing site, rust plain, rover tracks, cream and petrol dome, antenna, distant mesas, low sun, navy sky, open foreground, no characters, no text.
 
-![Landestelle mit Station, Reifenspuren und roten Marsbergen.](assets/images/mars-landestelle.webp)
+![Landestelle mit Station, Reifenspuren und roten Marsbergen.](assets/images/mars-landestelle.png)
 
 </section>
 
@@ -1460,11 +1459,11 @@ Hinweis: Nach der Faustregel dauert das Modul eher eine halbe Stunde als eine St
 
 * __Status:__ generated
 * __Source:__ generated
-* __File:__ assets/images/station-tharsis.webp
+* __File:__ assets/images/station-tharsis.png
 * __Alt text:__ Geschützter Kontrollraum mit Konsolen und einem Panoramafenster zum Mars.
 * __Prompt:__ Wide retro space-poster Mars habitat interior, cream curved ribs, petrol control consoles, cyan graphs, panoramic window onto Mars at dawn, open foreground, no people, no text.
 
-![Geschützter Kontrollraum mit Konsolen und einem Panoramafenster zum Mars.](assets/images/station-tharsis.webp)
+![Geschützter Kontrollraum mit Konsolen und einem Panoramafenster zum Mars.](assets/images/station-tharsis.png)
 
 </section>
 
@@ -1474,11 +1473,11 @@ Hinweis: Nach der Faustregel dauert das Modul eher eine halbe Stunde als eine St
 
 * __Status:__ generated
 * __Source:__ generated
-* __File:__ assets/images/krater-eis.webp
+* __File:__ assets/images/krater-eis.png
 * __Alt text:__ Marskrater mit cyanfarbenem Eis zwischen rostroten Felsen.
 * __Prompt:__ Wide retro space-poster Mars crater, rust-red cliffs, translucent cyan ice, frozen channel, deep blue sky, amber rim light, open foreground, no characters, no text.
 
-![Marskrater mit cyanfarbenem Eis zwischen rostroten Felsen.](assets/images/krater-eis.webp)
+![Marskrater mit cyanfarbenem Eis zwischen rostroten Felsen.](assets/images/krater-eis.png)
 
 </section>
 
@@ -1489,12 +1488,12 @@ Hinweis: Nach der Faustregel dauert das Modul eher eine halbe Stunde als eine St
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Alle Sprechtexte von Amara Okoye
-* __File:__ assets/images/amara-speaker.webp
+* __File:__ assets/images/amara-speaker.png
 * __Alt text:__ Amara frontal im passenden Fluganzug, mit Bildzuständen für Sprechen, Blinzeln und Zwinkern.
 * __Prompt:__ Frontaler Kopf-und-Schultern-Bildbogen der Amara aus dem gemeinsamen Figurenentwurf: dunkle Haut, hoher Lockenknoten, cremefarbener und petrolfarbener Fluganzug mit orangefarbenem Abzeichen. Vier ausgerichtete Zustände in einem 2 × 2-Raster: ruhend, Mund geöffnet, beide Augen geschlossen, ein Auge zwinkernd geschlossen. Transparenter Hintergrund. Mit dem eingebauten Bildgenerator anhand des Figurenbogens erzeugt; vollständige Vorgaben in [Figuren und Szenen](assets/scenes/README.md).
 * __Technical recheck:__ Mundwechsel, Pause/Fortsetzen/Stopp, Blinzeln, Zwinkern, reduzierte Bewegung und Sprecherwechsel im Browser geprüft, ohne Fehler.
 
-![Amaras Frontalporträt mit vier Bildzuständen](assets/images/amara-speaker.webp)
+![Amaras Frontalporträt mit vier Bildzuständen](assets/images/amara-speaker.png)
 
 </section>
 
@@ -1505,12 +1504,12 @@ Hinweis: Nach der Faustregel dauert das Modul eher eine halbe Stunde als eine St
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Alle Sprechtexte von Jonas Berg
-* __File:__ assets/images/jonas-speaker.webp
+* __File:__ assets/images/jonas-speaker.png
 * __Alt text:__ Jonas frontal mit runder Brille und kupferbraunem Haar, mit Bildzuständen für Sprechen, Blinzeln und Zwinkern.
 * __Prompt:__ Frontaler Kopf-und-Schultern-Bildbogen des Jonas aus dem gemeinsamen Figurenentwurf: kupferbraunes Haar, runde Brille, kurzer Bart, cremefarbener und petrolfarbener Fluganzug mit orangefarbenen Akzenten. Vier ausgerichtete Zustände in einem 2 × 2-Raster: ruhend, Mund geöffnet, beide Augen geschlossen, ein Auge zwinkernd geschlossen. Transparenter Hintergrund. Mit dem eingebauten Bildgenerator anhand des Figurenbogens erzeugt; vollständige Vorgaben in [Figuren und Szenen](assets/scenes/README.md).
 * __Technical recheck:__ Mundwechsel, Pause/Fortsetzen/Stopp, Blinzeln, Zwinkern, reduzierte Bewegung und Sprecherwechsel im Browser geprüft, ohne Fehler.
 
-![Jonas’ Frontalporträt mit vier Bildzuständen](assets/images/jonas-speaker.webp)
+![Jonas’ Frontalporträt mit vier Bildzuständen](assets/images/jonas-speaker.png)
 
 </section>
 
@@ -1673,13 +1672,13 @@ Hinweis: Nach der Faustregel dauert das Material eher 1,5–2 Stunden als die 4 
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Neuer Auftrag; Die Markierung leuchtet – Figuren und Szenenhintergründe
-* __File:__ assets/images/tharsis-crew.webp
+* __File:__ assets/images/tharsis-crew.png
 * __Alt text:__ Amara Okoye mit Tablet, Jonas Berg mit Werkzeug und Schildi als Solar-Rover mit Pixelgesicht.
 * __Prompt:__ Einheitliches Retro-Raumfahrt-Ensemble für Jugendliche: Amara mit dunkler Haut und Lockenknoten, Jonas mit kupferbraunem Haar und runder Brille, beide im cremefarbenen und petrolfarbenen Fluganzug; Schildi als schildkrötenförmiger Solar-Rover mit cyanfarbenem Pixelgesicht. Vollständige Bildvorgaben: [Figuren und Szenen](assets/scenes/README.md).
 * __Implementation:__ Landestelle; eigene PixiJS-Figuren und Effekte in assets/scenes/tharsis.js. Menschen in Außenansichten nur als gerahmte Funkbilder aus der Station. Schildi bleibt draußen.
 * __Technical recheck:__ Kursdarstellung bei 1280 × 900 und 390 × 844 geprüft: keine fehlenden Bilder, keine Laufzeitfehler. Elf Geschichten mit PixiJS 0.5.1 ohne Parserfehler. Keine erneute didaktische Gesamtvalidierung.
 
-![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.webp)
+![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.png)
 
 </section>
 
@@ -1859,13 +1858,13 @@ Hinweis: Nach der Faustregel dauert das Material eher 2–2,5 Stunden als die 5 
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Felsen auf der Route; Der Krater kommt näher – Figuren und Szenenhintergründe
-* __File:__ assets/images/tharsis-crew.webp
+* __File:__ assets/images/tharsis-crew.png
 * __Alt text:__ Amara Okoye mit Tablet, Jonas Berg mit Werkzeug und Schildi als Solar-Rover mit Pixelgesicht.
 * __Prompt:__ Einheitliches Retro-Raumfahrt-Ensemble für Jugendliche: Amara mit dunkler Haut und Lockenknoten, Jonas mit kupferbraunem Haar und runder Brille, beide im cremefarbenen und petrolfarbenen Fluganzug; Schildi als schildkrötenförmiger Solar-Rover mit cyanfarbenem Pixelgesicht. Vollständige Bildvorgaben: [Figuren und Szenen](assets/scenes/README.md).
 * __Implementation:__ Landestelle und Krater; eigene PixiJS-Figuren und Effekte in assets/scenes/tharsis.js. Menschen in Außenansichten nur als gerahmte Funkbilder aus der Station. Schildi bleibt draußen.
 * __Technical recheck:__ Kursdarstellung bei 1280 × 900 und 390 × 844 geprüft: keine fehlenden Bilder, keine Laufzeitfehler. Elf Geschichten mit PixiJS 0.5.1 ohne Parserfehler. Keine erneute didaktische Gesamtvalidierung.
 
-![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.webp)
+![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.png)
 
 </section>
 
@@ -2023,13 +2022,13 @@ Hinweis: Nach der Faustregel dauert das Material eher 2 Stunden als die 5 Stunde
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Der blaue Schimmer; Der Sturm zieht auf – Figuren und Szenenhintergründe
-* __File:__ assets/images/tharsis-crew.webp
+* __File:__ assets/images/tharsis-crew.png
 * __Alt text:__ Amara Okoye mit Tablet, Jonas Berg mit Werkzeug und Schildi als Solar-Rover mit Pixelgesicht.
 * __Prompt:__ Einheitliches Retro-Raumfahrt-Ensemble für Jugendliche: Amara mit dunkler Haut und Lockenknoten, Jonas mit kupferbraunem Haar und runder Brille, beide im cremefarbenen und petrolfarbenen Fluganzug; Schildi als schildkrötenförmiger Solar-Rover mit cyanfarbenem Pixelgesicht. Vollständige Bildvorgaben: [Figuren und Szenen](assets/scenes/README.md).
 * __Implementation:__ Kratereis, zunehmender Staub; eigene PixiJS-Figuren und Effekte in assets/scenes/tharsis.js. Menschen in Außenansichten nur als gerahmte Funkbilder aus der Station. Schildi bleibt draußen.
 * __Technical recheck:__ Kursdarstellung bei 1280 × 900 und 390 × 844 geprüft: keine fehlenden Bilder, keine Laufzeitfehler. Elf Geschichten mit PixiJS 0.5.1 ohne Parserfehler. Keine erneute didaktische Gesamtvalidierung.
 
-![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.webp)
+![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.png)
 
 </section>
 
@@ -2190,13 +2189,13 @@ Hinweis: Nach der Faustregel dauert das Material eher 1,5 Stunden als die 5–6 
 * __Status:__ generated
 * __Source:__ generated
 * __Place:__ Funkstille; Es lebt!; Erster Kontakt – Figuren und Szenenhintergründe
-* __File:__ assets/images/tharsis-crew.webp
+* __File:__ assets/images/tharsis-crew.png
 * __Alt text:__ Amara Okoye mit Tablet, Jonas Berg mit Werkzeug und Schildi als Solar-Rover mit Pixelgesicht.
 * __Prompt:__ Einheitliches Retro-Raumfahrt-Ensemble für Jugendliche: Amara mit dunkler Haut und Lockenknoten, Jonas mit kupferbraunem Haar und runder Brille, beide im cremefarbenen und petrolfarbenen Fluganzug; Schildi als schildkrötenförmiger Solar-Rover mit cyanfarbenem Pixelgesicht. Vollständige Bildvorgaben: [Figuren und Szenen](assets/scenes/README.md).
 * __Implementation:__ Kratereis, Sturm, leuchtende Glimmis; eigene PixiJS-Figuren und Effekte in assets/scenes/tharsis.js. Menschen in Außenansichten nur als gerahmte Funkbilder aus der Station. Schildi bleibt draußen.
 * __Technical recheck:__ Kursdarstellung bei 1280 × 900 und 390 × 844 geprüft: keine fehlenden Bilder, keine Laufzeitfehler. Elf Geschichten mit PixiJS 0.5.1 ohne Parserfehler. Keine erneute didaktische Gesamtvalidierung.
 
-![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.webp)
+![Gemeinsamer Figurenbogen der Station Tharsis](assets/images/tharsis-crew.png)
 
 </section>
 

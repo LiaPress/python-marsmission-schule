@@ -258,9 +258,11 @@
 
   window.TharsisVisuals = {
     configure(url) {
+      // a package passes the path relative, new URL(file, url) needs it absolute
+      url = new URL(url, document.baseURI).href;
       shared.atlasURL = url;
       load(atlas, url);
-      for (const [id, file] of [['okoye', 'amara-speaker.webp'], ['berg', 'jonas-speaker.webp']]) {
+      for (const [id, file] of [['okoye', 'amara-speaker.png'], ['berg', 'jonas-speaker.png']]) {
         load(portraits[id], new URL(file, url).href);
       }
       if (window.LIA?.narrator) window.LIA.narrator.registerAvatar('tharsis-speaker');
@@ -284,7 +286,7 @@
       const sprite = new PIXI.Sprite(texture);
       sprite.anchor.set(0.5, 1);
       if (radio) {
-        const station = await PIXI.Assets.load(new URL('station-tharsis.webp', shared.atlasURL).href);
+        const station = await PIXI.Assets.load(new URL('station-tharsis.png', shared.atlasURL).href);
         const panel = new PIXI.Container();
         const background = new PIXI.Sprite(station);
         background.anchor.set(0.5, 1);

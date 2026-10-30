@@ -23,7 +23,7 @@ Die elf Geschichten in der Kursdatei verwenden dieselben Figuren wie die Spreche
 
 Die Funkbilder sind als „STATION THARSIS / FUNK · INNENANSICHT“ beschriftet und zeigen den Kontrollraum hinter den Figuren. Sie sind eine gleichzeitige Erzählansicht, keine Behauptung einer verzögerungsfreien Verbindung zur Erde. Die Texte behalten die mehrminütige Funklaufzeit bei.
 
-[Vorschau: Schildi und Amaras Funkbild](funkkontakt-vorschau.webp)
+[Vorschau: Schildi und Amaras Funkbild](funkkontakt-vorschau.png)
 
 ## Animation und Bedienung
 
@@ -36,16 +36,16 @@ Die Funkbilder sind als „STATION THARSIS / FUNK · INNENANSICHT“ beschriftet
 
 ## Bilddateien und Herkunft
 
-Die Illustrationen wurden für diesen Kurs mit dem eingebauten Bildgenerator erzeugt. PNG-Dateien bleiben als Originale erhalten; der Kurs lädt komprimierte WebP-Dateien. Die Szenenfiguren stammen aus dem gemeinsamen Bildbogen; die Frontalporträts wurden anhand dieses Bogens erzeugt. Die Glimmis und Displayanimationen sind mit PixiJS beziehungsweise Canvas gezeichnet.
+Die Illustrationen wurden für diesen Kurs mit dem eingebauten Bildgenerator erzeugt. Der Kurs lädt optimierte PNG-Dateien mit 256 Farben (WebP kann H5P nicht darstellen): Hintergründe 1280 × 720, Sprecherbögen 960 × 960, der Figurenbogen bleibt wegen der festen Ausschnitte in `tharsis.js` bei 1536 × 1024. Die Rohfassungen liegen lokal unter `assets/images/original/` und sind nicht im Repository. Die Szenenfiguren stammen aus dem gemeinsamen Bildbogen; die Frontalporträts wurden anhand dieses Bogens erzeugt. Die Glimmis und Displayanimationen sind mit PixiJS beziehungsweise Canvas gezeichnet.
 
 | Datei unter `assets/images/` | Inhalt |
 |---|---|
-| `tharsis-crew.webp` | Gemeinsamer transparenter Figurenbogen mit Amara, Jonas und Schildi |
-| `mars-landestelle.webp` | Mars-Landestelle mit Station und Reifenspuren |
-| `station-tharsis.webp` | Kontrollraum mit Mars-Panoramafenster |
-| `krater-eis.webp` | Marskrater mit cyanfarbenem Eis |
-| `amara-speaker.webp` | Amara frontal: ruhend, sprechend, blinzelnd und zwinkernd |
-| `jonas-speaker.webp` | Jonas frontal: ruhend, sprechend, blinzelnd und zwinkernd |
+| `tharsis-crew.png` | Gemeinsamer transparenter Figurenbogen mit Amara, Jonas und Schildi |
+| `mars-landestelle.png` | Mars-Landestelle mit Station und Reifenspuren |
+| `station-tharsis.png` | Kontrollraum mit Mars-Panoramafenster |
+| `krater-eis.png` | Marskrater mit cyanfarbenem Eis |
+| `amara-speaker.png` | Amara frontal: ruhend, sprechend, blinzelnd und zwinkernd |
+| `jonas-speaker.png` | Jonas frontal: ruhend, sprechend, blinzelnd und zwinkernd |
 
 Die Turtle-Aufgaben verwenden zusätzlich eine passende Draufsicht in `lia-templates/python-pruefung/assets/schildi-oben.png`. Das Original wurde mit dem eingebauten Bildgenerator anhand des gemeinsamen Figurenbogens erzeugt; die optimierte PNG-Datei wird in die 48 × 48 große SVG-Form eingebettet. Dadurch funktionieren die Drehung und beide Sensorkegel ohne zusätzliche Bildabfragen. Das Pixel-Display kennzeichnet die Vorderseite, die Antenne sitzt hinten.
 

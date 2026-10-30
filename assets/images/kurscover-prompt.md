@@ -1,6 +1,6 @@
 # Kursbild für Kurskarten und GitHub
 
-Erstellt am 28.10.2026 mit dem eingebauten Bildgenerator. Referenz für Schildis Identität: `kurslogo.png`. Ausgabe: `kurscover.png` (1600 × 900) und `kurscover.webp`. Das quadratische Bildzeichen dient weiterhin als Icon.
+Erstellt am 28.10.2026 mit dem eingebauten Bildgenerator. Referenz für Schildis Identität: `kurslogo.png`. Ausgabe: Rohfassung 1600 × 900 (lokal unter `original/kurscover.png`), im Kurs `kurscover.png` mit 1280 × 720 und 256 Farben. Das quadratische Bildzeichen dient weiterhin als Icon.
 
 ## Bildprompt
 

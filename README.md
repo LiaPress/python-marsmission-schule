@@ -6,7 +6,7 @@ language: de
 narrator: Deutsch Female
 mode:     Presentation
 dark:     true
-logo:     ./assets/images/kurscover.webp
+logo:     ./assets/images/kurscover.png
 icon:     ./assets/images/kursicon.png
 comment:  Lerne Python mit Mars-Rover Schildi: ein interaktiver Selbstlernkurs ab Klasse 7 ohne Vorkenntnisse. Fünf Module mit Turtle-Grafik, automatischen Rückmeldungen, animierten Geschichten und eigenem Abschlussspiel – direkt im Browser, ohne Installation.
 tags:     Python, Programmieren lernen, Informatik, Schule, Sekundarstufe I, Klasse 7, Selbstlernkurs, Turtle-Grafik, Marsmission, Deutsch, LiaScript, OER, Open Educational Resources
@@ -184,13 +184,13 @@ details, .lia-quote, .lia-code__input, .lia-table-responsive, .lia-card {
 # Programmieren lernen mit Python – Schulversion
 
 <!-- style="width:960px;max-width:100%;display:block;margin:0 auto 1rem;" -->
-![Kursbild: Programmieren lernen mit Python – Schulversion. Schildi erkundet die Marslandschaft vor der Forschungsstation.](assets/images/kurscover.webp)
+![Kursbild: Programmieren lernen mit Python – Schulversion. Schildi erkundet die Marslandschaft vor der Forschungsstation.](assets/images/kurscover.png)
 
 <!--- Turtle-Sprite: lia-templates/python-pruefung/assets/schildi-oben.png wird durch python-pruefung.js als selbstständige SVG-Bildform eingebettet, einschließlich der Sensorvarianten. --->
 
-<!--- Frontal-Sprecher: assets/images/amara-speaker.webp und assets/images/jonas-speaker.webp werden durch assets/scenes/tharsis.js geladen und bei Sprechtexten animiert. --->
+<!--- Frontal-Sprecher: assets/images/amara-speaker.png und assets/images/jonas-speaker.png werden durch assets/scenes/tharsis.js geladen und bei Sprechtexten animiert. --->
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -208,7 +208,7 @@ Ein Tipp: Mach den Ton an. Dann erzählen wir – Schildi und ich – dir zu jed
 
 ## Hallo Schildi
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -239,7 +239,7 @@ Und zum Schluss schickst du Schildi deinen allerersten Funkspruch. Das dauert un
 
 ### Funkkontakt
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -249,8 +249,8 @@ Hier siehst du, was auf dem Mars passiert ist. Tippe in die Szene, um weiterzule
 story funkkontakt "Funkkontakt"
 lang de-DE
 option tts=on
-bg station assets/images/station-tharsis.webp alt="Kontrollraum der Station Tharsis, Amaras geschützter Arbeitsplatz"
-bg mars assets/images/mars-landestelle.webp alt="Landestelle mit Station, Reifenspuren und roten Marsbergen"
+bg station assets/images/station-tharsis.png alt="Kontrollraum der Station Tharsis, Amaras geschützter Arbeitsplatz"
+bg mars assets/images/mars-landestelle.png alt="Landestelle mit Station, Reifenspuren und roten Marsbergen"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
 
@@ -291,7 +291,7 @@ end start "Blättere weiter zu „Der Erd-Simulator“."
 
 ### Der Erd-Simulator
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -367,7 +367,7 @@ Jede Aufgabe hat einen Basis-Teil – den schafft jeder. Wenn du danach noch Lus
 
 ### Dein erster Funkspruch
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -464,7 +464,7 @@ SCHILDI an ERDE: Ich möchte wissen, wer du bist! Schick mir zwei Funksprüche: 
 
 ### Die erste rote Meldung
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -538,7 +538,7 @@ SCHILDI an ERDE: Diesen Fehler hebe ich auf! Ich sammle alle Fehlerarten in mein
 
 ### Selbsttest
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -572,7 +572,7 @@ Welche Zeile einer Fehlermeldung ist die eigentliche Nachricht?
 
 ### Schildi antwortet
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -582,7 +582,7 @@ Und jetzt: Schildis Antwort. Tippe in die Szene, um weiterzulesen.
 story schildi-antwortet "Schildi antwortet"
 lang de-DE
 option tts=on
-bg mars assets/images/mars-landestelle.webp alt="Landestelle mit Station, Reifenspuren und roten Marsbergen"
+bg mars assets/images/mars-landestelle.png alt="Landestelle mit Station, Reifenspuren und roten Marsbergen"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
 
@@ -606,7 +606,7 @@ end ende "Weiter geht es mit „Spuren im Staub“."
 
 ## Spuren im Staub
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -621,7 +621,7 @@ Schildi bekommt eine Aufgabe: eine **Landemarkierung** im Staub. Dafür lernst d
 
 ### Neuer Auftrag
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -631,7 +631,7 @@ Auf der Station ist jemand Neues aufgewacht. Tippe in die Szene, um weiterzulese
 story neuer-auftrag "Neuer Auftrag"
 lang de-DE
 option tts=on
-bg mars assets/images/mars-landestelle.webp alt="Außenkamera an Schildis Route; die Crew meldet sich aus der Station"
+bg mars assets/images/mars-landestelle.png alt="Außenkamera an Schildis Route; die Crew meldet sich aus der Station"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -659,7 +659,7 @@ end start "Blättere weiter zu „Schildis Notizbuch“."
 
 ### Schildis Notizbuch
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -827,7 +827,7 @@ Kleine Denkaufgabe: Was steht am Ende im Notizbuch? Und im Extra bekommt Schildi
 
 ### Rechnen auf dem Mars
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -1016,7 +1016,7 @@ SCHILDI an ERDE: Elf Komma sechs sechs sechs? Ein Komma? Ach so, geteilt durch g
 
 ### Funksprüche mit Text
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -1163,7 +1163,7 @@ SCHILDI an ERDE: Piep, piep, piep! Mit dem Malzeichen wiederhole ich einen Text.
 
 ### Spuren im Staub
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -1367,7 +1367,7 @@ Jetzt wird es kniffliger: ein Dreieck. Überleg genau, wie weit sich Schildi an 
 
 ### Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -1500,7 +1500,7 @@ Vorsicht, Falle: Bei einer fehlenden Klammer nennt Python oft die Zeile danach. 
 
 ### Selbsttest
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -1583,7 +1583,7 @@ Wie beim Quadrat – aber abwechselnd `forward(breite)` und `forward(hoehe)`.
 
 ### Die Markierung leuchtet
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -1593,7 +1593,7 @@ Geschafft. Schau, was auf dem Mars passiert. Tippe in die Szene.
 story markierung "Die Markierung leuchtet"
 lang de-DE
 option tts=on
-bg mars assets/images/mars-landestelle.webp alt="Landestelle mit Station, Reifenspuren und roten Marsbergen"
+bg mars assets/images/mars-landestelle.png alt="Landestelle mit Station, Reifenspuren und roten Marsbergen"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -1619,7 +1619,7 @@ end ende "Weiter geht es mit „Hindernisse und Gesteinsproben“."
 
 ## Hindernisse und Gesteinsproben
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -1635,7 +1635,7 @@ Schildi fährt zum Krater. Dafür lernst du heute:
 
 ### Felsen auf der Route
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -1645,7 +1645,7 @@ Die Sensoren melden etwas auf der Route. Tippe in die Szene, um weiterzulesen.
 story felsen "Felsen auf der Route"
 lang de-DE
 option tts=on
-bg mars assets/images/mars-landestelle.webp alt="Außenkamera an Schildis Route; die Crew meldet sich aus der Station"
+bg mars assets/images/mars-landestelle.png alt="Außenkamera an Schildis Route; die Crew meldet sich aus der Station"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -1672,7 +1672,7 @@ end start "Blättere weiter zu „Schildi entscheidet“."
 
 ### Schildi entscheidet
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -1808,7 +1808,7 @@ Bei der Reihenfolge kommt es auf das Einrücken an. Wer mehr will, findet auf de
 
 #### Extras: Schildi entscheidet
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -1878,7 +1878,7 @@ Gesucht ist das englische Wort für „und“.
 
 ### Immer wieder
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -2004,7 +2004,7 @@ SCHILDI an ERDE: Ein Paket für ein ganzes Sechseck! Akku: zufrieden. Auf der n�
 
 #### Extras: Immer wieder
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -2082,7 +2082,7 @@ erwarte(all(abs(laenge(linien[k]) - (10 + 10 * k)) < 2 for k in range(12)), "Die
 
 ### Solange der Akku reicht
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -2155,7 +2155,7 @@ Die Zeile fahrten gleich fahrten plus eins ist ein Zähler. In jeder Runde kommt
 
 #### Extras: Solange der Akku reicht
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -2228,7 +2228,7 @@ In jeder Runde soll die Zahl um 1 kleiner werden.
 
 ### Die Probenliste
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -2362,7 +2362,7 @@ For probe in proben heißt: Nimm nacheinander jede Probe aus der Liste. In jeder
 
 #### Extras: Die Probenliste
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -2439,7 +2439,7 @@ Schildi merkt sich die neue schwerste Probe in der Variablen `schwerste`.
 
 ### Route scannen
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -2498,7 +2498,7 @@ SCHILDI an ERDE: Fahren, ausweichen, fahren, ausweichen, fahren. Ich habe fünfm
 
 #### Extras: Route scannen
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -2577,7 +2577,7 @@ Unter `else:` gehört der Befehl fürs Geradeausfahren – eingerückt.
 
 ### Schildis Sensor
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -2679,7 +2679,7 @@ Jetzt fährt Schildi ganz allein durchs Kraterfeld. Bei jedem Schritt fragt er s
 
 #### Extras: Schildis Sensor
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -2766,7 +2766,7 @@ Die Zahl der Schritte hat Schildi sich in einer Variablen gemerkt. Im Prüflauf 
 
 ### Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -2862,7 +2862,7 @@ SCHILDI an ERDE: Zwei neue Fehler für mein Kabinett: Nummer vier, die Schleife 
 
 #### Extras: Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -2957,7 +2957,7 @@ Ein `=` heißt „merk dir das“. Zum Vergleichen braucht Python etwas anderes.
 
 ### Selbsttest
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -3039,7 +3039,7 @@ for t in temperaturen:
 
 #### Extras: Meisterstück
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -3085,7 +3085,7 @@ for runde in range(6):
 
 ### Der Krater kommt näher
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -3095,7 +3095,7 @@ Geschafft. Schau, wie weit Schildi gekommen ist. Tippe in die Szene.
 story krater "Der Krater kommt näher"
 lang de-DE
 option tts=on
-bg mars assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
+bg mars assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -3120,7 +3120,7 @@ end ende "Weiter geht es mit „Manöver und Probenkatalog“."
 
 ## Manöver und Probenkatalog
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -3135,7 +3135,7 @@ Schildi fährt in den Krater. Dafür lernst du heute:
 
 ### Der blaue Schimmer
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -3145,7 +3145,7 @@ Schildi blickt in den Krater. Tippe in die Szene, um weiterzulesen.
 story schimmer "Der blaue Schimmer"
 lang de-DE
 option tts=on
-bg mars assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
+bg mars assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -3170,7 +3170,7 @@ end start "Blättere weiter zu „Eigene Befehle“."
 
 ### Eigene Befehle
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -3303,7 +3303,7 @@ Der Befehl ecke kennt eine Seite und eine Ecke. Die Schleife ruft ihn viermal au
 
 #### Extras: Eigene Befehle
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -3353,7 +3353,7 @@ def zickzack():
 
 ### Befehle mit Zutaten
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -3491,7 +3491,7 @@ SCHILDI an ERDE: Die Prüfung hat mich gerade dreimal gefragt, mit fünfzig, ach
 
 #### Extras: Befehle mit Zutaten
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -3566,7 +3566,7 @@ Ein Vergleich ergibt schon `True` oder `False` – den kannst du direkt zurückg
 
 ### Der Probenkatalog
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -3705,7 +3705,7 @@ Befehl und Katalog arbeiten jetzt zusammen. Die Prüfung ruft gewicht mit versch
 
 #### Extras: Der Probenkatalog
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -3781,7 +3781,7 @@ erwarte(gewicht("Eis") == 1, "Bekannte Proben sollen weiter ihr Gewicht liefern.
 
 ### Funkeln im Krater
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -3899,7 +3899,7 @@ Nord, Ost, Süd oder West: Welcher Kristall leuchtet, entscheidet der Zufall. F�
 
 #### Extras: Funkeln im Krater
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -3979,7 +3979,7 @@ Wie beim Zählen der Eis-Proben in Modul 3: Der Zähler bekommt eins dazu.
 
 ### Manöver im Kraterfeld
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -4047,7 +4047,7 @@ SCHILDI an ERDE: Fahre bis zum Felsen. Weiche aus. Fahre bis zum Felsen. Weiche 
 
 #### Extras: Manöver im Kraterfeld
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -4100,7 +4100,7 @@ Die Schleife soll so oft laufen, wie die Zutat sagt – schreib ihren Namen in d
 
 ### Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -4219,7 +4219,7 @@ SCHILDI an ERDE: Eis mit kleinem e steht nicht in meinem Katalog. Für mich sind
 
 #### Extras: Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -4284,7 +4284,7 @@ Schreib `melden()` unter den Befehl – nicht eingerückt.
 
 ### Selbsttest
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -4372,7 +4372,7 @@ def bewerte(probe):
 
 #### Extras: Meisterstück
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -4428,7 +4428,7 @@ for i in range(5):
 
 ### Der Sturm zieht auf
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -4438,7 +4438,7 @@ Geschafft. Aber auf dem Mars bleibt es nicht lange ruhig. Tippe in die Szene.
 story sturm "Der Sturm zieht auf"
 lang de-DE
 option tts=on
-bg mars assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
+bg mars assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -4464,7 +4464,7 @@ end ende "Weiter geht es mit „Staubsturm“."
 
 ## Staubsturm
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -4479,7 +4479,7 @@ Schildi steckt im Staubsturm. Dafür lernst du heute:
 
 ### Funkstille
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -4489,7 +4489,7 @@ Der Sturm hat Schildi erreicht. Tippe in die Szene, um weiterzulesen.
 story funkstille "Funkstille"
 lang de-DE
 option tts=on
-bg sturm assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
+bg sturm assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -4516,7 +4516,7 @@ end start "Blättere weiter zu „Funk-Runden“."
 
 ### Funk-Runden
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -4641,7 +4641,7 @@ Ohne int ist meter der Text drei, und Text mal zehn ist zehnmal die Drei hintere
 
 #### Extras: Funk-Runden
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -4723,7 +4723,7 @@ Noch ein `elif` mit demselben Aufbau wie bei `links` – eingerückt wie die and
 
 ### Lichtblitze zählen
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -4887,7 +4887,7 @@ Wer wild rät, braucht bis zu zwanzig Funk-Runden. Das sind fast sieben Stunden.
 
 #### Extras: Lichtblitze zählen
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -4943,7 +4943,7 @@ Ist der Tipp zu klein, kann die Zahl frühestens **eins über** dem Tipp liegen.
 
 ### Es lebt!
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -4953,7 +4953,7 @@ Schildi hat das Licht erreicht. Tippe in die Szene, um weiterzulesen.
 story eslebt "Es lebt!"
 lang de-DE
 option tts=on
-bg sturm assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
+bg sturm assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"
@@ -4989,7 +4989,7 @@ end start "Blättere weiter zu „Die Stimmungen der Glimmis“."
 
 ### Die Stimmungen der Glimmis
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -5201,7 +5201,7 @@ Farbe, Größe und ein Funkspruch. So versteht jeder die Antwort der Glimmis, au
 
 #### Extras: Die Stimmungen der Glimmis
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -5298,7 +5298,7 @@ und im Dictionary:
 
 ### Dein eigenes Wesen
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -5448,7 +5448,7 @@ SCHILDI an ERDE: Ein gutes Wesen antwortet immer, auch wenn ich etwas falsch mac
 
 #### Extras: Dein eigenes Wesen
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -5480,7 +5480,7 @@ Ein paar Ideen, wie dein Wesen noch lebendiger wird. Alles freiwillig. Jede Idee
 
 ### Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.schildi
     --{{0 Deutsch Male}}--
@@ -5654,7 +5654,7 @@ SCHILDI an ERDE: Zisch war nicht kaputt. Seine Regeln hatten nur eine Sackgasse.
 
 #### Extras: Finde den Fehler
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(berg)
     --{{0 Deutsch Male}}--
@@ -5704,7 +5704,7 @@ def naechste(stimmung, bewegung):
 
 ### Selbsttest
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -5744,7 +5744,7 @@ Ein Wesen hat die Stimmungen still, munter, froh und diese Regeln: `"still+links
 
 ### Erster Kontakt
 
-@[Tharsis.init](./assets/images/tharsis-crew.webp)
+@[Tharsis.init](./assets/images/tharsis-crew.png)
 
     @Tharsis.speaker(okoye)
     --{{0 Deutsch Female}}--
@@ -5754,8 +5754,8 @@ Der Sturm lässt nach. Tippe in die Szene, um die Mission zu beenden.
 story kontakt "Erster Kontakt"
 lang de-DE
 option tts=on
-bg sturm assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
-bg mars assets/images/krater-eis.webp alt="Marskrater mit bläulich leuchtendem Eis"
+bg sturm assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
+bg mars assets/images/krater-eis.png alt="Marskrater mit bläulich leuchtendem Eis"
 char okoye "Kommandantin Amara Okoye" type=tharsis person=okoye height=0.52 y=0.74 voice="Deutsch Female"
 char berg "Techniker Jonas Berg" type=tharsis person=berg height=0.52 y=0.74 voice="Deutsch Male"
 char schildi "Schildi" type=tharsis person=schildi height=0.38 y=0.78 voice="Deutsch Male"

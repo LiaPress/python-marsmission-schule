@@ -25,12 +25,8 @@ node_modules/
 # CI des Teaching-Agents selbst (prüft die Specs, nicht den Kurs)
 .github/workflows/
 
-# Bildentwürfe und Rohfassungen – im Kurs werden die WebP-Fassungen geladen
-assets/images/*.png
-!assets/images/kurslogo.png
-!assets/images/kurslogo-original.png
-!assets/images/kursicon.png
-!assets/images/kurscover.png
+# Bildrohfassungen – im Kurs werden die optimierten PNG-Fassungen geladen
+assets/images/original/
 assets/scenes/sprecher-vorschau.gif
 assets/theme/schildi-mars.json
 lia-templates/python-pruefung/assets/schildi-oben-original.png
